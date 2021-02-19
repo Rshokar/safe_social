@@ -30,7 +30,7 @@ It has the following subfolders and files:
 ├── scripts                  # Folder for scripts
     /blah.js                 # 
 ├── styles                   # Folder for styles
-    /blah.css                # 
+    /main.css                # 
 
 Firebase hosting files: 
 ├── .firebaserc...
