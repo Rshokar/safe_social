@@ -43,6 +43,10 @@ Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
 
+<<<<<<< HEAD
 ## userpages 
 Ravinder Shokar 
 exposures.html
+=======
+Brendan Lin - edited index.html
+>>>>>>> 1db22eac8ae09d455f42c617850f038d16ee5613
