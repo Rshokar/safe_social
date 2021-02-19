@@ -45,5 +45,9 @@ Tips for file naming files and folders:
 
 ## userpages 
 Ravinder Shokar - exposures.html
+
+## userpages
 Brendan Lin - index.html
+
+## userpages
 Trevor Hong - events.html
