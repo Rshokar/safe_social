@@ -17,6 +17,7 @@ Technologies used for this project:
 ## Content
 Content of the project folder:
 
+
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
@@ -42,4 +43,11 @@ Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
 
-Brendan Lin - edited index.html
+## Ravinder Shokar
+exposures.html
+
+## Brendan Lin
+index.html
+
+## Trevor Hong
+events.html
