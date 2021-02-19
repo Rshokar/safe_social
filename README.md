@@ -17,6 +17,7 @@ Technologies used for this project:
 ## Content
 Content of the project folder:
 
+
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
@@ -30,7 +31,7 @@ It has the following subfolders and files:
 ├── scripts                  # Folder for scripts
     /blah.js                 # 
 ├── styles                   # Folder for styles
-    /blah.css                # 
+    /main.css                # 
 
 Firebase hosting files: 
 ├── .firebaserc...
@@ -42,6 +43,7 @@ Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
 
-## userpages
-Trevor Hong
-events.html
+## userpages 
+Ravinder Shokar - exposures.html
+Brendan Lin - index.html
+Trevor Hong - events.html
