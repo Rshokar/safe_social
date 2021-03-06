@@ -42,3 +42,129 @@ p {
     color: gray;
 }
 
+#login {
+    position: relative;
+    left: 510%;
+}
+
+#button {
+    position: relative;
+    top: 60%;
+}
+
+#button2 {
+    position: relative;
+    top: 67%;
+}
+
+#loginText {
+    position: relative;
+    left: 19%;
+    top: 40%;
+}
+
+#event {
+    position: relative;
+    left: 570%;
+}
+
+#mInfo {
+    position: relative;
+    top: 100%;
+    left: 36%;
+}
+
+#mInfoExt {
+    position: relative;
+    top: 110%;
+    left: 31.5%;
+}
+
+#mInfoTxt {
+    font-size: 110%;
+}
+
+#features {
+    position: relative;
+    top: 130%;
+    left: 41%;
+}
+
+#fTxt {
+    font-size: 200%;
+}
+
+#fTxt2 {
+    font-size: 200%;
+}
+
+#featuresTxt {
+    position: relative;
+    top: 139%;
+    left: 29%;
+}
+
+#featuresTxt2 {
+    position: relative;
+    top: 148%;
+    left: 35%;
+}
+
+@media screen and (max-width: 680px) {
+    #loginText {
+        position: relative;
+        left: 1%;
+        top: 40%;
+    }
+
+    #button {
+        position: absolute;
+        top: 60%;
+        right: 180%;
+    }
+    
+    #button2 {
+        position: absolute;
+        top: 70%;
+        right: 155%;
+    }
+
+    #mInfo {
+        position: relative;
+        top: 93%;
+        left: 20%;
+    }
+    
+    #mInfoExt {
+        position: relative;
+        top: 100%;
+        left: 1%;
+    }
+
+    #features {
+        position: relative;
+        top: 130%;
+        left: 33%;
+    }    
+
+    #featuresTxt {
+        position: relative;
+        top: 135%;
+        left: 5%;
+    }
+    
+    #featuresTxt2 {
+        position: relative;
+        top: 142%;
+        left: 15%;
+    }
+
+    #fTxt {
+        font-size: 150%;
+    }
+    
+    #fTxt2 {
+        font-size: 150%;
+    }
+}
+

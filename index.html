@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My BCIT Project</title>
+    <title>Safe Social</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -37,41 +37,68 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html" tabindex="-1" aria-disabled="true">Login</a>
+                        <a class="nav-link active" aria-current="page" href="login.html">Login</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container">
+    <div class="position-absolute" id="loginText">
         <h1 class="display-4">Welcome to Safe Social</h1>
-        <p>Where socializing during the pandemic becomes safe </p>
+        <p class="display-6">Where socializing during the pandemic becomes safe</p>
+
     </div>
 
-    <div class="container">
-        <h2>Discover</h2>
-        <p>Look at some locations worth booking here</p>
+    <div class="position-absolute" id="button">
+        <a href="login.html"><button type="button" class="btn btn-primary" id="login">Login/Sign Up</button></a>
     </div>
 
-    <nav class="navbar fixed-bottom navbar-light bg-light">
-        <div class="container-fluid">
-            <p id="center">Copyright 2021 All Rights Reserved</p>
-        </div>
-    </nav>
+    <div class="position-absolute" id="button2">
+        <a href="login.html"><button type="button" class="btn btn-outline-primary" id="event">Create Event</button></a>
+    </div>
+
+    <div class="position-absolute" id="mInfo">
+        <h2 class="display-6">What is Safe Social?</h2>
+    </div>
+
+    <div class="position-absolute" id="mInfoExt">
+        <p id="mInfoTxt">Safe Social is a web app that allows users to<br />
+            create events at municipality locations and<br /> send invitations
+            to guests to attend in a COVID-safe manner.
+        </p>
+    </div>
+
+    <div class="position-absolute" id="features">
+        <h2 class="display-6">Features</h2>
+    </div>
+
+    <div class="position-absolute" id="featuresTxt">
+        <p id="fTxt">Safe Social includes: </p>
+    </div>
+
+    <div class="position-absolute" id="featuresTxt2">
+        <p id="fTxt2">Guest Coordination<br />COVID Tracking<br />
+            Guest Communication<br />Virtual Ticket
+        </p>
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+    <footer>
+        <nav class="navbar fixed-bottom navbar-light bg-warning">
+            <a class="navbar-brand" href="#">Fixed bottom</a>
+          </nav>
+    </footer>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
+    </script>
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
