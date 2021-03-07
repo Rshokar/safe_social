@@ -94,19 +94,9 @@ p {
     font-size: 200%;
 }
 
-#fTxt2 {
-    font-size: 200%;
-}
-
 #featuresTxt {
     position: relative;
     top: 139%;
-    left: 29%;
-}
-
-#featuresTxt2 {
-    position: relative;
-    top: 148%;
     left: 35%;
 }
 
@@ -150,20 +140,10 @@ p {
     #featuresTxt {
         position: relative;
         top: 135%;
-        left: 5%;
-    }
-    
-    #featuresTxt2 {
-        position: relative;
-        top: 142%;
         left: 15%;
     }
 
     #fTxt {
-        font-size: 150%;
-    }
-    
-    #fTxt2 {
         font-size: 150%;
     }
 }

@@ -29,9 +29,10 @@ It has the following subfolders and files:
 ├── images                   # Folder for images
     /blah.jpg                # 
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /index.js                # JavaScript for sticky Nav 
 ├── styles                   # Folder for styles
-    /main.css                # 
+    /main.css                # CSS for main page styles
+    /stickyNav.css           # CSS for sticky Nav
 
 Firebase hosting files: 
 ├── .firebaserc...
@@ -48,6 +49,9 @@ exposures.html
 
 ## Brendan Lin
 index.html
+index.js
+main.css *(some styles created)
+stickyNav.css
 
 ## Trevor Hong
 events.html

@@ -15,7 +15,7 @@
 
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="styles/main.css" />
-
+    <link rel="stylesheet" href="styles/stickyNav.css" />
 </head>
 
 <body>
@@ -74,11 +74,7 @@
     </div>
 
     <div class="position-absolute" id="featuresTxt">
-        <p id="fTxt">Safe Social includes: </p>
-    </div>
-
-    <div class="position-absolute" id="featuresTxt2">
-        <p id="fTxt2">Guest Coordination<br />COVID Tracking<br />
+        <p id="fTxt">Guest Coordination<br />COVID Tracking<br />
             Guest Communication<br />Virtual Ticket
         </p>
         <br />
@@ -88,9 +84,33 @@
     </div>
 
     <footer>
-        <nav class="navbar fixed-bottom navbar-light bg-warning">
-            <a class="navbar-brand" href="#">Fixed bottom</a>
-          </nav>
+        <nav class="mobile-bottom-nav">
+            <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">home</i>
+                    one
+                </div>		
+            </div>
+            <div class="mobile-bottom-nav__item">		
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">mail</i>
+                    two
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">person</i>
+                    three
+                </div>		
+            </div>
+            
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <i class="material-icons">phone</i>
+                    four
+                </div>		
+            </div>
+        </nav>
     </footer>
 
     <!----------------------------------------------->
@@ -103,7 +123,7 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
