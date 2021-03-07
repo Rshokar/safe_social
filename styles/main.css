@@ -100,7 +100,57 @@ p {
     left: 35%;
 }
 
+#mobile-nav-bar {
+    visibility: hidden;
+}
+
+
 @media screen and (max-width: 680px) {
+    #desktop-nav-bar {
+        visibility: hidden;
+    }
+
+    #mobile-nav-bar {
+        visibility: visible;
+    }
+
+    .mobile-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        will-change: transform;
+        transform: translateZ(0);
+        display: flex;
+        height: 50px;
+        box-shadow: 0 -2px 5px -2px #333;
+        background-color: rgb(235, 176, 15);
+    }
+    .mobile-bottom-nav__item {
+        flex-grow: 1;
+        text-align: center;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mobile-bottom-nav__item--active {
+      color: red;
+    }
+    .mobile-bottom-nav__item-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mobile-nav-bar-icon {
+        display: inline-block;
+        margin: auto;
+        height: 2vh;
+        width: 2vh;
+    }
+    
+
     #loginText {
         position: relative;
         left: 1%;
