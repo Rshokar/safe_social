@@ -19,10 +19,6 @@
 </head>
 
 <body>
-
-    <!-------------------------------------->
-    <!-- The following is HTML for layout -->
-    <!-------------------------------------->
     <!-- Header Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-warning">
         <div class="container-fluid">
@@ -49,6 +45,9 @@
             </div>
         </div>
     </nav>
+    <!-------------------------------------->
+    <!-- Put Content Here -->
+    <!-------------------------------------->
 
     <div class="container">
         <h1>Exposures</h1>
@@ -149,11 +148,37 @@
         </div>
     </div>
 
-    <nav class="navbar fixed-bottom navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Fixed bottom</a>
-        </div>
-    </nav>
+    <!-- Mobile Navigation Bar -->
+    <footer id="mobile-nav-bar">
+        <nav class="mobile-bottom-nav">
+            <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content">
+                    <img src="images/events.png" class="mobile-nav-bar-icon">
+                    <i class="material-icons">Events</i>
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <img src="images/discover.png" class="mobile-nav-bar-icon">
+                    <i class="material-icons">Discover</i>
+
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <img src="images/account.png" class="mobile-nav-bar-icon">
+                    <i class="material-icons">Account</i>
+                </div>
+            </div>
+
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <img src="images/plus.png" class="mobile-nav-bar-icon">
+                    <i class="material-icons">New</i>
+                </div>
+            </div>
+        </nav>
+    </footer>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->

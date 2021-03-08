@@ -106,8 +106,66 @@ p {
 
 
 @media screen and (max-width: 680px) {
+
+    #top {
+        margin: auto;
+        width: 90%;
+        height: 8vh
+    }
+
+    #top h1 {
+        text-align: left;
+        line-height: 10vh;
+    }
+
+    /* This is where you will find CSS for discover_events */
+    .box {
+        height: 14vh;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 1em;
+        border-left: 2px solid red;
+        overflow:unset;
+    }
+
+    .event_name {
+        font-size: 15pt;
+        text-align: left;
+        margin: 0 auto;
+        width: 90%;
+        overflow: hidden;
+        height: 4vh;
+        font-weight: bol;
+    }
+
+    .event_address {
+        font-size: 11pt;
+        text-align: left;
+        margin: 0 auto;
+        width: 90%;
+        overflow: hidden;
+        height: 2v;
+    }
+
+    .raiting_container {
+        margin: 0 auto;
+        width: 92%;
+        margin-top: .1em;
+    }
+
+    .categories {
+        display: inline-block;
+        margin: 0 auto;
+        width: 90%;
+        text-align: left;
+    }
+        
+
+
+    /* End of discover_events */
+
     #desktop-nav-bar {
-        visibility: hidden;
+        display: none;
     }
 
     #mobile-nav-bar {
@@ -120,8 +178,6 @@ p {
         left: 0;
         right: 0;
         z-index: 1000;
-        will-change: transform;
-        transform: translateZ(0);
         display: flex;
         height: 50px;
         box-shadow: 0 -2px 5px -2px #333;
