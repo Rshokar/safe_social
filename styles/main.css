@@ -63,6 +63,12 @@ p {
     top: 40%;
 }
 
+#loginText2 {
+    position: relative;
+    left: 30%;
+    top: 30%;
+}
+
 #event {
     position: relative;
     left: 570%;
@@ -355,6 +361,12 @@ p {
         position: relative;
         left: 1%;
         top: 40%;
+    }
+
+    #loginText2 {
+        position: relative;
+        left: 10%;
+        top: 30%;
     }
 
     #button {
