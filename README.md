@@ -52,6 +52,7 @@ index.html
 index.js
 main.css *(some styles created)
 stickyNav.css
+login.html
 
 ## Trevor Hong
 events.html
