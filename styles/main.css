@@ -7,8 +7,6 @@ body {
     overflow: auto;
 }
 
-
-
 table {
 
     text-align: left;
@@ -28,6 +26,7 @@ tfoot th {
     position: sticky;
     bottom: 0;
 }
+
 * {
 
     text-align: center;
@@ -37,6 +36,7 @@ tfoot th {
 
     text-align: center;
 }
+
 p {
     text-align: center;
     font-size: 20%;
@@ -107,18 +107,47 @@ p {
     left: 35%;
 }
 
-
 #nav_container a {
     color: white;
 }
 
-#desktop-nav-bar{
+#desktop-nav-bar {
     background-color: #1c4587;
 }
 
 .mobile-bottom-nav {
     visibility: hidden;
     background-color: #1c4587;
+}
+
+/*Booking Confirmation Page (mobile) */
+#bookingconfirm {
+    position: absolute;
+    left: 17.5%;
+    top: 10%;
+}
+
+#confirmtxt {
+    position: absolute;
+    right: 70%;
+    top: 200%;
+}
+
+#submit {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+}
+
+#back {
+    position: absolute;
+    left: 20%;
+    top: 60%;
+}
+
+/*Booking Page (mobile) */
+#booking {
+    margin-top: 10%;
 }
 
 /* Desktop */
@@ -129,10 +158,10 @@ p {
         width: 80%;
         display: flex;
         flex-wrap: wrap;
-        align-items:flex-start;
+        align-items: flex-start;
         justify-content: start;
     }
-    
+
     #top {
         margin: auto;
         width: 100%;
@@ -144,7 +173,7 @@ p {
         line-height: 10vh;
     }
 
-    
+
 
     /* This is where you will find CSS for discover_events */
     .box {
@@ -152,12 +181,12 @@ p {
         width: 90%;
         max-width: 375px;
         margin-top: 1em;
-        overflow:unset;
+        overflow: unset;
     }
 
     .box:hover {
         background-color: #f7f7f7;
-      }
+    }
 
     .event_name {
         padding-left: .5em;
@@ -192,10 +221,40 @@ p {
     }
 
     /* End of discover_events */
+    /*Booking Confirmation Page */
+    #bookingconfirm {
+        position: absolute;
+        left: 35%;
+    }
+
+    #confirmtxt {
+        position: absolute;
+        right: 80%;
+        top: 150%;
+    }
+
+    #submit {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+    }
+
+    #back {
+        position: absolute;
+        left: 40%;
+        top: 60%;
+    }
+
+    /*Login Page */
+    #loginTxt {
+        position: relative;
+        left: 30%;
+        top: 30%;
+    }
 }
 
 /* Tablet Devices */
-@media only screen and  (min-width : 601px) and (max-width : 1080px) {
+@media only screen and (min-width : 601px) and (max-width : 1080px) {
 
 
     #content_section {
@@ -203,10 +262,10 @@ p {
         width: 80%;
         display: flex;
         flex-wrap: wrap;
-        align-items:flex-start;
+        align-items: flex-start;
         justify-content: start;
     }
-    
+
     #top {
         margin: auto;
         width: 100%;
@@ -218,7 +277,7 @@ p {
         line-height: 50px;
     }
 
-    
+
 
     /* This is where you will find CSS for discover_events */
     .box {
@@ -226,12 +285,12 @@ p {
         width: 90%;
         max-width: 400px;
         margin-top: 1em;
-        overflow:unset;
+        overflow: unset;
     }
 
     .box:hover {
         background-color: #f7f7f7;
-      }
+    }
 
     .event_name {
         padding-left: .5em;
@@ -289,12 +348,12 @@ p {
         width: 90%;
         margin: 0 auto;
         margin-top: 1em;
-        overflow:unset;
+        overflow: unset;
     }
 
     .box:hover {
         background-color: #f7f7f7;
-      }
+    }
 
     .event_name {
         padding-left: .5em;
@@ -327,6 +386,7 @@ p {
         width: 100%;
         text-align: left;
     }
+
     /* End of discover_events */
 
     #desktop-nav-bar {
@@ -357,10 +417,11 @@ p {
         display: block;
     }
 
-    #mobile_nav_links img, 
+    #mobile_nav_links img,
     #mobile_nav_links span {
         display: block;
     }
+
     .mobile-bottom-nav__item {
         flex-grow: 1;
         text-align: center;
@@ -369,12 +430,14 @@ p {
         flex-direction: column;
         justify-content: center;
     }
+
     .mobile-bottom-nav__item--active {
-      color: red;
+        color: red;
     }
+
     .mobile-bottom-nav__item-content {
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
 
     .mobile-nav-bar-icon {
@@ -383,7 +446,7 @@ p {
         height: 2vh;
         width: 2vh;
     }
-    
+
 
     #loginText {
         position: relative;
@@ -402,7 +465,7 @@ p {
         top: 60%;
         right: 180%;
     }
-    
+
     #button2 {
         position: absolute;
         top: 70%;
@@ -414,7 +477,7 @@ p {
         top: 93%;
         left: 20%;
     }
-    
+
     #mInfoExt {
         position: relative;
         top: 100%;
@@ -425,7 +488,7 @@ p {
         position: relative;
         top: 130%;
         left: 33%;
-    }    
+    }
 
     #featuresTxt {
         position: relative;
@@ -436,13 +499,24 @@ p {
     #fTxt {
         font-size: 150%;
     }
+
+    /*Login (mobile) */
+    #loginTxt {
+        margin-top: 30%;
+        margin-left: 3%;
+    }
+
+    #firebaseui-auth-container {
+        width: 70%;
+        margin-left: 15%;
+    }
 }
 
 #eventlist {
     overflow-y: scroll;
     overflow: hidden;
 }
+
 .booking {
     padding-top: 5em;
 }
-
