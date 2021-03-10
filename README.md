@@ -27,9 +27,14 @@ Content of the project folder:
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                # 
+    /blah.jpg                #
+    /accound.png             #
+    /discover.png            #
+    /events.png              #
+    /plus.png                # 
 ├── scripts                  # Folder for scripts
-    /index.js                # JavaScript for sticky Nav 
+    /index.js
+    /create_blocks.js        # JavaScript Content Blocks 
 ├── styles                   # Folder for styles
     /main.css                # CSS for main page styles
     /stickyNav.css           # CSS for sticky Nav
@@ -46,6 +51,8 @@ Tips for file naming files and folders:
 
 ## Ravinder Shokar
 exposures.html
+discover.html
+create_blocks.js
 
 ## Brendan Lin
 index.html
