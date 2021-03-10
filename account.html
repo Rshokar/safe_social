@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Discover</title>
+    <title>Safe Social</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -15,6 +15,7 @@
 
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/account.css" />
 </head>
 
 <body>
@@ -50,14 +51,23 @@
             </div>
         </div>
     </nav>
-
-    <!-------------------------------------->
-    <!-- Put Content Here -->
-    <!-------------------------------------->
+    <!-- Content Section -->
     <div id="content_section">
         <div id="page_title">
-            <h1>Discover</h1>
+            <h1>Account</h1>
         </div>
+        <div id="user_image_container">
+            <img src="images/user1.jpg" alt="Avatar" class="avatar">
+            <span class="user_name">Ravinder Shokar</span>
+        </div>
+        <div id="user_details">
+            <ul class="list-group">
+                <li class="list-group-item">Ravinder Shokar</li>
+                <li class="list-group-item">Ravinder@test.com</li>
+                <li class="list-group-item">604-999-0000</li>
+            </ul>
+        </div>
+        <h4>Event History</h4>
     </div>
 
     <!-- Mobile Navigation Bar -->
@@ -98,6 +108,7 @@
             </div>
         </nav>
     </footer>
+
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
@@ -108,8 +119,7 @@
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="scripts/create_blocks.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>

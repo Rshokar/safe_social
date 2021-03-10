@@ -1,0 +1,13 @@
+#user_image_container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    justify-content: left;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }

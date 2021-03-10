@@ -54,10 +54,11 @@ function createStar(inColor) {
     "display": "inline-block",
     "background-color": inColor,
     "clip-path": "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
-    "width": "5vw",
-    "height": "25px",
+    "width": "20px",
+    "height": "20px",
     "max-width": "25px",
     "float": "left",
+    "margin-top": ".2em",
   })
 
   return star;
