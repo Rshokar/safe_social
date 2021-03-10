@@ -26,7 +26,7 @@
     <!-- Desktop and Tablet Navigation Bar -->
     <nav id="desktop-nav-bar" class="navbar navbar-expand-lg navbar-light bg-warning">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Safe Social</a>
+            <a class="navbar-brand" href="index.html">Safe Social</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Discover</a>
+                        <a class="nav-link active" aria-current="page" href="login.html">Discover</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="login.html">About</a>
@@ -104,7 +104,14 @@
     <script>
         // Your web app's Firebase configuration
         //place authorization access code here once created in firebase
-        
+        var firebaseConfig = {
+            apiKey: "AIzaSyAmuuGtu_0dhUvhqlD5YLl_x8pHTuu8PPo",
+            authDomain: "safesocial-9a48e.firebaseapp.com",
+            projectId: "safesocial-9a48e",
+            storageBucket: "safesocial-9a48e.appspot.com",
+            messagingSenderId: "373403391792",
+            appId: "1:373403391792:web:613d7c5c2ac25876949af5"
+        };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
@@ -131,7 +138,7 @@
             },
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
-            signInSuccessUrl: 'main.html',
+            signInSuccessUrl: 'discover.html',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
                 //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
