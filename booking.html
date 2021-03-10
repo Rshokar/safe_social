@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Events</title>
+    <title>Booking</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -19,10 +19,6 @@
 </head>
 
 <body>
-
-    <!-------------------------------------->
-    <!-- The following is HTML for layout -->
-    <!-------------------------------------->
     <!-- Header Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-warning">
         <div class="container-fluid">
@@ -34,10 +30,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Events</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Discover</a>
+                        <a class="nav-link" href="#">Features</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>
@@ -49,67 +45,53 @@
             </div>
         </div>
     </nav>
+    <!-------------------------------------->
+    <!-- Put Content Here -->
+    <!-------------------------------------->
 
     <div class="container">
-        <h1 class="display-4">Event Listing</h1>
-    </div>
-    <div class="container">
-        <div class="list-group" id="eventlist">
-          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Sunset Community Center</h5>
-              <small>2 days ago</small>
+        <h1>Event Booking</h1>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Event</label>
+            <div class="col-10">
+                <input class="form-control" type="text" placeholder="Event Name" id="example-text-input">
             </div>
-            <small>March 12th, 2021</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Esquire Basketball Park</h5>
-              <small class="text-muted">1 days ago</small>
-            </div>
-            <small class="text-muted">March 12th, 2021</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Vancouver Skate Park</h5>
-              <small class="text-muted">50 minutes ago</small>
-            </div>
-            <small class="text-muted">March 12th, 2021</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Stanley Park</h5>
-              <small class="text-muted">5 days ago</small>
-            </div>
-            <small class="text-muted">March 12th, 2021</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Vancouver Aquarium</h5>
-              <small class="text-muted">50 minutes ago</small>
-            </div>
-            <small class="text-muted">March 12th, 2021</small>
-          </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">YMCA</h5>
-              <small class="text-muted">4 days ago</small>
-            </div>
-            <small class="text-muted">April 1st, 2021</small>
-             </a>
-          <a href="#" class="list-group-item list-group-item-action">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">Vancouver Skate Park</h5>
-              <small class="text-muted">50 minutes ago</small>
-            </div>
-            <small class="text-muted">March 12th, 2021</small>
-          </a>
-            </a>
-          </a>
         </div>
-              </div>
-      </nav>
-      <footer id="mobile-nav-bar">
+        <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Email</label>
+            <div class="col-10">
+                <input class="form-control" type="email" placeholder="Email Address" id="example-email-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-tel-input" class="col-2 col-form-label">Phone</label>
+            <div class="col-10">
+                <input class="form-control" type="tel" placeholder="Phone Number" id="example-tel-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-password-input" class="col-2 col-form-label">Location</label>
+            <div class="col-10">
+                <input class="form-control" type="password" value="hunter2" id="example-password-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-date-input" class="col-2 col-form-label">Date</label>
+            <div class="col-10">
+                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-time-input" class="col-2 col-form-label">Time</label>
+            <div class="col-10">
+                <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+
+    <!-- Mobile Navigation Bar -->
+    <footer id="mobile-nav-bar">
         <nav class="mobile-bottom-nav">
             <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
                 <div class="mobile-bottom-nav__item-content">
@@ -139,13 +121,12 @@
             </div>
         </nav>
     </footer>
-
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
