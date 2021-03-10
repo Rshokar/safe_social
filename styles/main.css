@@ -29,7 +29,6 @@ tfoot th {
     bottom: 0;
 }
 * {
-
     text-align: center;
 }
 
@@ -176,7 +175,6 @@ p {
     padding-left: .5em;
     margin: 0 auto;
     margin-top: .1em;
-    min-width: 300px;
 }
 
 .categories {
