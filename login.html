@@ -24,9 +24,9 @@
     <!-- The following is HTML for layout -->
     <!-------------------------------------->
     <!-- Desktop and Tablet Navigation Bar -->
-    <nav id="desktop-nav-bar" class="navbar navbar-expand-lg navbar-light bg-warning">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Safe Social</a>
+    <nav id="desktop-nav-bar" class="navbar navbar-expand-lg navbar-light">
+        <div id="nav_container" class="container-fluid">
+            <a class="navbar-brand" href="index.html">Safe Social</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,13 +34,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Discover</a>
+                        <a class="nav-link active" aria-current="page" href="events.html">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="login.html">About</a>
+                        <a class="nav-link active" aria-current="page" href="discover.html">Discover</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="login.html">COVID-safe</a>
+                        <a class="nav-link active" aria-current="page" href="account.html">Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="new.html">New</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="login.html">Sign Up</a>
@@ -63,51 +66,52 @@
         <nav class="mobile-bottom-nav">
             <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
                 <div class="mobile-bottom-nav__item-content">
-                    <img src="images/events.png" class="mobile-nav-bar-icon">
-                    <i class="material-icons">Events</i>
+                    <a id="mobile_nav_links" href="events.html">
+                        <img src="images/events.png" class="mobile-nav-bar-icon">
+                        <i class="material-icons">Events</i>
+                    </a>
                 </div>
             </div>
             <div class="mobile-bottom-nav__item">
                 <div class="mobile-bottom-nav__item-content">
-                    <img src="images/discover.png" class="mobile-nav-bar-icon">
-                    <i class="material-icons">Discover</i>
+                    <a id="mobile_nav_links" href="discover.html">
+                        <img src="images/discover.png" class="mobile-nav-bar-icon">
+                        <i class="material-icons">Discover</i>
+                    </a>
+                </div>
+            </div>
+            <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                    <a id="mobile_nav_links" href="account.html">
+                        <img src="images/account.png" class="mobile-nav-bar-icon">
+                        <i class="material-icons">Account</i>
+                    </a>
+                </div>
+            </div>
 
-                </div>
-            </div>
             <div class="mobile-bottom-nav__item">
                 <div class="mobile-bottom-nav__item-content">
-                    <img src="images/account.png" class="mobile-nav-bar-icon">
-                    <i class="material-icons">Account</i>
-                </div>
-            </div>
-
-            <div class="mobile-bottom-nav__item">
-                <div class="mobile-bottom-nav__item-content">
-                    <img src="images/plus.png" class="mobile-nav-bar-icon">
-                    <i class="material-icons">New</i>
+                    <a id="mobile_nav_links" href="new.html">
+                        <img src="images/plus.png" class="mobile-nav-bar-icon">
+                        <i class="material-icons">New</i>
+                    </a>
                 </div>
             </div>
         </nav>
     </footer>
 
     <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, API related    -->
+    <!--   JS: Boostrap, Firebase, API related   -->
     <!----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-    <script>
-        // Your web app's Firebase configuration
-        //place authorization access code here once created in firebase
-        
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
+    <script src="scripts/firebase_api.js"></script>
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
@@ -131,7 +135,7 @@
             },
             // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
             signInFlow: 'popup',
-            signInSuccessUrl: 'main.html',
+            signInSuccessUrl: 'discover.html',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
                 //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
