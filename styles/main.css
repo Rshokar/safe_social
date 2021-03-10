@@ -1,4 +1,3 @@
-
 body {
     text-align: center;
 }
@@ -7,6 +6,8 @@ body {
     height: 400px;
     overflow: auto;
 }
+
+
 
 table {
 
@@ -106,11 +107,170 @@ p {
     left: 35%;
 }
 
-#mobile-nav-bar {
-    visibility: hidden;
+
+#nav_container a {
+    color: white;
 }
 
-@media screen and (max-width: 680px) {
+#desktop-nav-bar{
+    background-color: #1c4587;
+}
+
+.mobile-bottom-nav {
+    visibility: hidden;
+    background-color: #1c4587;
+}
+
+/* Desktop */
+@media only screen and (min-width : 1081px) {
+
+    #content_section {
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items:flex-start;
+        justify-content: start;
+    }
+    
+    #top {
+        margin: auto;
+        width: 100%;
+        height: 8vh
+    }
+
+    #top h1 {
+        text-align: center;
+        line-height: 10vh;
+    }
+
+    
+
+    /* This is where you will find CSS for discover_events */
+    .box {
+        height: 100px;
+        width: 90%;
+        max-width: 375px;
+        margin-top: 1em;
+        overflow:unset;
+    }
+
+    .box:hover {
+        background-color: #f7f7f7;
+      }
+
+    .event_name {
+        padding-left: .5em;
+        font-size: 15pt;
+        text-align: left;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 30px;
+        font-weight: bold;
+    }
+
+    .event_address {
+        padding-left: .5em;
+        font-size: 11pt;
+        text-align: left;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .raiting_container {
+        padding-left: .5em;
+        margin: 0 auto;
+        margin-top: .1em;
+    }
+
+    .categories {
+        padding-left: .5em;
+        display: inline-block;
+        margin: 0 auto;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* End of discover_events */
+}
+
+/* Tablet Devices */
+@media only screen and  (min-width : 601px) and (max-width : 1080px) {
+
+
+    #content_section {
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items:flex-start;
+        justify-content: start;
+    }
+    
+    #top {
+        margin: auto;
+        width: 100%;
+        height: 45px
+    }
+
+    #top h1 {
+        text-align: left;
+        line-height: 50px;
+    }
+
+    
+
+    /* This is where you will find CSS for discover_events */
+    .box {
+        height: 100px;
+        width: 90%;
+        max-width: 400px;
+        margin-top: 1em;
+        overflow:unset;
+    }
+
+    .box:hover {
+        background-color: #f7f7f7;
+      }
+
+    .event_name {
+        padding-left: .5em;
+        font-size: 15pt;
+        text-align: left;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 30px;
+        font-weight: bold;
+    }
+
+    .event_address {
+        padding-left: .5em;
+        font-size: 11pt;
+        text-align: left;
+        margin: 0 auto;
+        overflow: hidden;
+        height: 20px
+    }
+
+    .raiting_container {
+        padding-left: .5em;
+        margin: 0 auto;
+        margin-top: .1em;
+    }
+
+    .categories {
+        padding-left: .5em;
+        display: inline-block;
+        margin: 0 auto;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* End of discover_events */
+}
+
+/*  Mobile Devices */
+@media screen and (max-width: 600px) {
 
     #top {
         margin: auto;
@@ -125,55 +285,55 @@ p {
 
     /* This is where you will find CSS for discover_events */
     .box {
-        height: 14vh;
+        height: 100px;
         width: 90%;
         margin: 0 auto;
         margin-top: 1em;
-        border-left: 2px solid red;
         overflow:unset;
     }
 
+    .box:hover {
+        background-color: #f7f7f7;
+      }
+
     .event_name {
+        padding-left: .5em;
         font-size: 15pt;
         text-align: left;
         margin: 0 auto;
-        width: 90%;
         overflow: hidden;
-        height: 4vh;
-        font-weight: bol;
+        height: 30px;
+        font-weight: bold;
     }
 
     .event_address {
+        padding-left: .5em;
         font-size: 11pt;
         text-align: left;
         margin: 0 auto;
-        width: 90%;
         overflow: hidden;
-        height: 2v;
     }
 
     .raiting_container {
+        padding-left: .5em;
         margin: 0 auto;
-        width: 92%;
         margin-top: .1em;
     }
 
     .categories {
+        padding-left: .5em;
         display: inline-block;
         margin: 0 auto;
-        width: 90%;
+        width: 100%;
         text-align: left;
     }
-        
-
-
     /* End of discover_events */
 
     #desktop-nav-bar {
         display: none;
     }
 
-    #mobile-nav-bar {
+    .mobile-bottom-nav {
         visibility: visible;
     }
 
@@ -186,7 +346,20 @@ p {
         display: flex;
         height: 50px;
         box-shadow: 0 -2px 5px -2px #333;
-        background-color: rgb(235, 176, 15);
+        background-color: #1c4587;
+    }
+
+    .mobile-bottom-nav i {
+        color: white;
+    }
+
+    .mobile_nav_links {
+        display: block;
+    }
+
+    #mobile_nav_links img, 
+    #mobile_nav_links span {
+        display: block;
     }
     .mobile-bottom-nav__item {
         flex-grow: 1;
@@ -265,162 +438,11 @@ p {
     }
 }
 
-@media screen and (min-width: 681px) and (max-width: 1024px) {
-
-    #top {
-        margin: auto;
-        width: 90%;
-        height: 8vh
-    }
-
-    #top h1 {
-        text-align: left;
-        line-height: 10vh;
-    }
-
-    /* This is where you will find CSS for discover_events */
-    .box {
-        height: 14vh;
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 1em;
-        border-left: 2px solid red;
-        overflow:unset;
-    }
-
-    .event_name {
-        font-size: 15pt;
-        text-align: left;
-        margin: 0 auto;
-        width: 90%;
-        overflow: hidden;
-        height: 4vh;
-        font-weight: bol;
-    }
-
-    .event_address {
-        font-size: 11pt;
-        text-align: left;
-        margin: 0 auto;
-        width: 90%;
-        overflow: hidden;
-        height: 2v;
-    }
-
-    .raiting_container {
-        margin: 0 auto;
-        width: 92%;
-        margin-top: .1em;
-    }
-
-    .categories {
-        display: inline-block;
-        margin: 0 auto;
-        width: 90%;
-        text-align: left;
-    }
-        
-
-
-    /* End of discover_events */
-
-    #desktop-nav-bar {
-        display: none;
-    }
-
-    #mobile-nav-bar {
-        visibility: visible;
-    }
-
-    .mobile-bottom-nav {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        display: flex;
-        height: 50px;
-        box-shadow: 0 -2px 5px -2px #333;
-        background-color: rgb(235, 176, 15);
-    }
-    .mobile-bottom-nav__item {
-        flex-grow: 1;
-        text-align: center;
-        font-size: 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .mobile-bottom-nav__item--active {
-      color: red;
-    }
-    .mobile-bottom-nav__item-content {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .mobile-nav-bar-icon {
-        display: inline-block;
-        margin: auto;
-        height: 2vh;
-        width: 2vh;
-    }
-    
-
-    #loginText {
-        position: relative;
-        left: 1%;
-        top: 40%;
-    }
-
-    #loginText2 {
-        position: relative;
-        left: 10%;
-        top: 30%;
-    }
-
-    #button {
-        position: absolute;
-        top: 60%;
-        right: 180%;
-    }
-    
-    #button2 {
-        position: absolute;
-        top: 70%;
-        right: 155%;
-    }
-
-    #mInfo {
-        position: relative;
-        top: 99%;
-        left: 30%;
-    }
-    
-    #mInfoExt {
-        position: relative;
-        top: 104%;
-        left: 16%;
-    }
-
-    #features {
-        position: relative;
-        top: 130%;
-        left: 38%;
-    }    
-
-    #featuresTxt {
-        position: relative;
-        top: 135%;
-        left: 30%;
-    }
-
-    #fTxt {
-        font-size: 150%;
-    }
-
-    #login {
-        right: 550%;
-    }
+#eventlist {
+    overflow-y: scroll;
+    overflow: hidden;
+}
+.booking {
+    padding-top: 5em;
 }
 
