@@ -60,14 +60,14 @@
             <img src="images/user1.jpg" alt="Avatar" class="avatar">
             <span class="user_name">Ravinder Shokar</span>
         </div>
-        <div id="user_details">
-            <ul class="list-group">
-                <li class="list-group-item">Ravinder Shokar</li>
-                <li class="list-group-item">Ravinder@test.com</li>
-                <li class="list-group-item">604-999-0000</li>
-            </ul>
+        <div id="user_setting">
+            <span>USER SETTINGS</span>
+            <div><i id="my_account_icon"></i>My Account</div>
+            <div><i id="freinds_icon"></i>Freinds</div>
+            <div><i id="exposures_icon"></i>Exposures</div>
+            <div><i id="event_history_icon"></i>Event History</div>
+            <div><i id="dark_mode_icon"></i>Dark Mode</div>
         </div>
-        <h4>Event History</h4>
     </div>
 
     <!-- Mobile Navigation Bar -->
@@ -116,10 +116,18 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
         </script>
 
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="scripts/firebase_api.js"></script>
+
+
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
     <script src="scripts/index.js"></script>
+
+    <script src="scripts/on_run.js"></script>
 </body>
 
 </html>

@@ -120,9 +120,7 @@ p {
     background-color: #1c4587;
 }
 
-.box:hover {
-    background-color: #f7f7f7;
-  }
+
 
 #content_section {
     margin: auto;
@@ -146,10 +144,12 @@ p {
 
 /* This is where you will find CSS for discover_events */
 .box {
-    height: 100px;
     width: 100%;
     margin-top: 1em;
     overflow:hidden;
+}
+.box:hover {
+    background-color: #f7f7f7d8;
 }
 
 .event_name {
@@ -198,6 +198,8 @@ p {
     /* This is where you will find CSS for discover_events */
     .box {
         max-width: 375px;
+        margin-right: 1em;
+        margin-left: 1em;
     }
     /* End of discover_events */
 }
@@ -207,6 +209,8 @@ p {
     /* This is where you will find CSS for discover_events */
     .box {
         max-width: 300px;
+         margin-right: 1em;
+        margin-left: 1em;
     }
     /* End of discover_events */
 }

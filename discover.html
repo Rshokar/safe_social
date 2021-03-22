@@ -110,6 +110,28 @@
     <!--------------------------------------------------------------------->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="scripts/create_blocks.js"></script>
+
+    <script>
+        $(function () {
+            $(".box").click(function () {
+                console.log("Event Targt:" + this)
+                if ($(this).hasClass("active")) {
+
+                    $(this).removeClass("active")
+
+                    let img = $(this).children("img")
+                    img.slideUp(1000)
+
+                } else {
+                    $(this).addClass("active")
+
+                    let img = $(this).children("img")
+                    img.slideDown(1000)
+                }
+
+            })
+        })
+    </script>
 </body>
 
 </html>
