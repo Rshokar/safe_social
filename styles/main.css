@@ -350,3 +350,70 @@ p {
     padding-top: 5em;
 }
 
+#eventHeading {
+    position: absolute;
+    left: 70px;
+}
+
+#emailHeading {
+    position: relative;
+    left: 36px;
+    top: 30px;
+}
+
+#phoneHeading {
+    position: relative;
+    left: 30px;
+}
+
+#locationHeading {
+    position: relative;
+    left: 20px;
+    bottom: 30px;
+}
+
+#dateHeading {
+    position: relative;
+    left: 92px;
+    bottom: 50px;
+}
+
+#timeHeading {
+    position: relative;
+    left: 80px;
+    bottom: 50px;
+}
+
+#location{
+    position: relative;
+    left: 120px;
+    bottom: 25px;
+}
+
+#date{
+    position: relative;
+    left: 20px;
+}
+
+#time{
+    position: relative;
+    left: 40px;
+}
+
+#event {
+    position: relative;
+    left: 120px;
+    bottom: 27px;
+}
+
+#email {
+    position: relative;
+    left: 130px;
+    bottom: 27px;
+}
+
+#phone {
+    position: relative;
+    left: 120px;
+    bottom: 26px;
+}

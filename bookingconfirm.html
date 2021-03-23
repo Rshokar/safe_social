@@ -38,7 +38,7 @@
                         <a class="nav-link active" aria-current="page" href="account.html">Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="new.html">New</a>
+                        <a class="nav-link active" aria-current="page" href="booking.html">New</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="login.html">Sign Up</a>
@@ -54,12 +54,12 @@
     <div class="position-absolute" id="bookingconfirm">
         <h1 class="display-4">Confirm Booking</h1>
         <div id="confirmtxt">
-            <h4>Event: <span></span></h4>
-            <h4>Email: <span></span></h4>
-            <h4>Phone: <span></span></h4>
-            <h4>Location: <span></span></h4>
-            <h4>Date: <span></span></h4>
-            <h4>Time: <span></span></h4>
+            <h4 id="eventHeading">Event: <span id="event"></span></h4>
+            <h4 id="emailHeading">Email: <span id="email"></span></h4>
+            <h4 id="phoneHeading">Phone: <span id="phone"></span></h4>
+            <h4 id="locationHeading">Location: <span id="location"></span></h4>
+            <h4 id="dateHeading">Date: <span id="date"></span></h4>
+            <h4 id="timeHeading">Time: <span id="time"></span></h4>
         </div>
     </div>
 
@@ -106,7 +106,7 @@
 
             <div class="mobile-bottom-nav__item">
                 <div class="mobile-bottom-nav__item-content">
-                    <a id="mobile_nav_links" href="new.html">
+                    <a id="mobile_nav_links" href="booking.html">
                         <img src="images/plus.png" class="mobile-nav-bar-icon">
                         <i class="material-icons">New</i>
                     </a>
@@ -138,8 +138,21 @@
     <script src="scripts/on_run.js"></script>
 
     <script src="scripts/index.js"></script>
+    <script>
+        function getDataBooking2() {
+            var myObj = JSON.parse(localStorage.getItem('formdata'));
+            console.log(myObj);
 
+            document.getElementById("event").innerHTML = myObj.event;
+            document.getElementById("email").innerHTML = myObj.email;
+            document.getElementById("phone").innerHTML = myObj.phone;
+            document.getElementById("location").innerHTML = myObj.location;
+            document.getElementById("date").innerHTML = myObj.date;
+            document.getElementById("time").innerHTML = myObj.time;
+        }
 
+        getDataBooking2();
+    </script>
 </body>
 
 </html>
