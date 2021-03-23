@@ -29,40 +29,40 @@
             <div class="col-10">
                 <input class="form-control" type="text" placeholder="Event Name" id="example-text-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-email-input" class="col-2 col-form-label">Email</label>
             <div class="col-10">
                 <input class="form-control" type="email" placeholder="Email Address" id="example-email-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-tel-input" class="col-2 col-form-label">Phone</label>
             <div class="col-10">
                 <input class="form-control" type="tel" placeholder="Phone Number" id="example-tel-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-password-input" class="col-2 col-form-label">Location</label>
             <div class="col-10">
                 <input class="form-control" type="password" value="hunter2" id="example-password-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-date-input" class="col-2 col-form-label">Date</label>
             <div class="col-10">
                 <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-time-input" class="col-2 col-form-label">Time</label>
@@ -70,7 +70,7 @@
                 <input class="form-control" type="time" value="13:45:00" id="example-time-input">
             </div>
         </div>
-        <br/>
+        <br />
         <a href="bookingconfirm.html"><button class="btn btn-primary" type="submit">Next</button></a>
     </div>
 
@@ -110,11 +110,23 @@
     <!----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="scripts/firebase_api.js"></script>
+    <script>
+        const auth = firebase.auth();
+        const db = firebase.firestore();
     </script>
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
 
+    <!-- Runs every time the file is opened -->
+    <script src="scripts/on_run.js"></script>
+
+    <script src="scripts/on_run.js"></script>
 </body>
 
 </html>

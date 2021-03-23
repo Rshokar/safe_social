@@ -54,12 +54,12 @@
     <div class="position-absolute" id="bookingconfirm">
         <h1 class="display-4">Confirm Booking</h1>
         <div id="confirmtxt">
-        <h4>Event: <span></span></h4>
-        <h4>Email: <span></span></h4>
-        <h4>Phone: <span></span></h4>
-        <h4>Location: <span></span></h4>
-        <h4>Date: <span></span></h4>
-        <h4>Time: <span></span></h4>
+            <h4>Event: <span></span></h4>
+            <h4>Email: <span></span></h4>
+            <h4>Phone: <span></span></h4>
+            <h4>Location: <span></span></h4>
+            <h4>Date: <span></span></h4>
+            <h4>Time: <span></span></h4>
         </div>
     </div>
 
@@ -122,10 +122,24 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
         </script>
 
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="scripts/firebase_api.js"></script>
+    <script>
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+
+    <!-- Runs every time the file is opened -->
+    <script src="scripts/on_run.js"></script>
+
     <script src="scripts/index.js"></script>
+
+
 </body>
 
 </html>
