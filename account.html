@@ -63,10 +63,11 @@
         <div id="user_setting">
             <span>USER SETTINGS</span>
             <div><i id="my_account_icon"></i>My Account</div>
-            <div><i id="freinds_icon"></i>Freinds</div>
+            <div><i id="freinds_icon"></i>Friends</div>
             <div><i id="exposures_icon"></i>Exposures</div>
             <div><i id="event_history_icon"></i>Event History</div>
             <div><i id="dark_mode_icon"></i>Dark Mode</div>
+            <div><a id="logout">Log Out</a></div>
         </div>
     </div>
 
@@ -120,6 +121,10 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="scripts/firebase_api.js"></script>
+    <script>
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
 
 
     <!--------------------------------------------------------------------->
@@ -128,6 +133,7 @@
     <script src="scripts/index.js"></script>
 
     <script src="scripts/on_run.js"></script>
+    <script src="scripts/logout.js"></script>
 </body>
 
 </html>

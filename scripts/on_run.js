@@ -1,6 +1,7 @@
 let restricted = ["account.html", "exposures.html", "bookingconfirm.html", "booking.html"]
 
 console.log(firebase)
+var userName = "test";
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         console.log(user)
