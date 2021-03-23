@@ -29,40 +29,40 @@
             <div class="col-10">
                 <input class="form-control" type="text" placeholder="Event Name" id="example-text-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-email-input" class="col-2 col-form-label">Email</label>
             <div class="col-10">
                 <input class="form-control" type="email" placeholder="Email Address" id="example-email-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-tel-input" class="col-2 col-form-label">Phone</label>
             <div class="col-10">
                 <input class="form-control" type="tel" placeholder="Phone Number" id="example-tel-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-password-input" class="col-2 col-form-label">Location</label>
             <div class="col-10">
                 <input class="form-control" type="password" value="hunter2" id="example-password-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-date-input" class="col-2 col-form-label">Date</label>
             <div class="col-10">
                 <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
         </div>
         <div class="form-group row">
             <label for="example-time-input" class="col-2 col-form-label">Time</label>
@@ -70,8 +70,8 @@
                 <input class="form-control" type="time" value="13:45:00" id="example-time-input">
             </div>
         </div>
-        <br/>
-        <a href="bookingconfirm.html"><button class="btn btn-primary" type="submit">Next</button></a>
+        <br />
+        <a href="bookingconfirm.html"><button class="btn btn-primary" type="submit" onclick="setDataBooking()">Next</button></a>
     </div>
 
     <!-- Mobile Navigation Bar -->
@@ -110,12 +110,35 @@
     <!----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
+    </script>
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+    <script>
+        function setDataBooking() {
+            var myEvent = document.getElementById("example-text-input").value;
+            var myEmail = document.getElementById("example-email-input").value;
+            var myPhone = document.getElementById("example-tel-input").value;
+            var myLocation = document.getElementById("example-password-input").value;
+            var myDate = document.getElementById("example-date-input").value;
+            var myTime = document.getElementById("example-time-input").value;
 
+            var obj = {
+                "event": myEvent,
+                "email": myEmail,
+                "phone": myPhone,
+                "location": myLocation,
+                "date": myDate,
+                "time": myTime
+            }
+
+            console.log(obj);
+            localStorage.setItem('formdata', JSON.stringify(obj));
+        }
+
+        //setDataBooking();
+    </script>
 </body>
 
 </html>
