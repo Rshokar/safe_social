@@ -84,10 +84,10 @@
         <p id="fTxt">Guest Coordination<br />COVID Tracking<br />
             Guest Communication<br />Virtual Ticket
         </p>
-        <br />
-        <br />
-        <br />
-        <br />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
     </div>
     <!-------------------------------------->
     <!-- Put Content Here -->
@@ -144,6 +144,17 @@
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
     <script src="scripts/index.js"></script>
+
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                console.log(user)
+                console.log('It worked')
+            } else {
+                console.log('It worked')
+            }
+        });
+    </script>
 </body>
 
 </html>

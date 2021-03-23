@@ -1,0 +1,52 @@
+#content_section {
+    width: 100%;
+}
+
+#page_title {
+    width: 90%;
+}
+
+#user_image_container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    justify-content: left;
+    margin-top: 1em;
+}
+.avatar {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+.user_name {
+    line-height: 50px;
+    font-size: 15pt;
+    font-weight: bold;
+}   
+
+#user_setting {
+    background-color: #f0f0f0c0;
+    width: 100%;
+    text-align: left;
+}
+
+#user_setting span {
+    text-align: left;
+    padding-left: 2em;
+    line-height: 50px;
+}
+
+#user_setting div {
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 2em;
+   
+}
+
+#user_setting div:hover {
+    background-color: black;
+    color: white;
+}
