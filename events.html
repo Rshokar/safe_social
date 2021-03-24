@@ -112,6 +112,13 @@
         </div>
         <small class="text-muted">March 12th, 2021</small>
       </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1" id="location"></h5>
+          <small class="text-muted">A few seconds ago</small>
+        </div>
+        <small class="text-muted" id="date"></small>
+      </a>
       </a>
       </a>
     </div>
@@ -161,6 +168,7 @@
   <!----------------------------------------------->
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
   <script src="scripts/firebase_api.js"></script>
   <script>
     const auth = firebase.auth();
@@ -171,12 +179,29 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
 
+    <!-- Link to the api keys for your firebase project -->
+    <script src="scripts/firebase_api.js"></script>
+
   <!--------------------------------------------------------------------->
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
 
   <!-- Runs every time the file is opened -->
   <script src="scripts/on_run.js"></script>
+
+  <script>
+      function readEvent() {
+        //.doc("Enter document hash to access that user's event info")
+        db.collection("Event").doc("1QTBjqhk1sKpBKg1LVls")
+        .onSnapshot(function(snap) {
+          //console.log(snap.data());
+          document.getElementById("location").innerHTML = snap.data().Location;
+          document.getElementById("date").innerHTML = snap.data().Date;
+        })
+      }
+
+      readEvent();
+  </script>
 
 </body>
 
