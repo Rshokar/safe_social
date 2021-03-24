@@ -67,7 +67,7 @@
     </div>
 
     <div class="position-absolute" id="submit">
-        <button class="btn btn-primary" type="submit" 
+        <button class="btn btn-primary" type="submit" id="sButton" 
             onclick="writeEvent()">Submit</button>
     </div>
 
@@ -168,6 +168,8 @@
                 Location: document.getElementById("location").innerHTML,
                 Date: document.getElementById("date").innerHTML,
                 Time: document.getElementById("time").innerHTML
+            }).then(function(){
+                window.location.replace("discover.html");
             });
         }
 
