@@ -38,15 +38,29 @@
     line-height: 50px;
 }
 
-#user_setting div {
+#user_setting > .button {
     height: 50px;
-    line-height: 50px;
     text-align: left;
     padding-left: 2em;
-   
+    line-height: 50px;
 }
 
-#user_setting div:hover {
+#user_setting .button:hover {
     background-color: black;
     color: white;
+}
+
+#my_account_form {
+    margin: 0 auto;
+    background-color: #acacacc0;
+    width: 100%;
+}
+
+#my_account_form form {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 1em;
+    line-height: 10px;
+    text-align: left;
+    padding-bottom: 1em;
 }
