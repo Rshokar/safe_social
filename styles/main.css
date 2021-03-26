@@ -69,11 +69,12 @@ p {
     top: 30%;
 }
 
+/*
 #event {
     position: relative;
     left: 570%;
 }
-
+*/
 #mInfo {
     position: relative;
     top: 100%;
@@ -123,14 +124,7 @@ p {
 
 
 
-#content_section {
-    margin: auto;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items:flex-start;
-    justify-content: center;
-}
+
 
 #page_title {
     margin: auto;
@@ -280,91 +274,3 @@ p {
     padding-top: 5em;
 }
 
-/*bookingconfirm css (mobile) */
-#eventHeading {
-    position: absolute;
-    left: 70px;
-}
-
-#emailHeading {
-    position: relative;
-    left: 20px;
-    top: 20px;
-}
-
-#phoneHeading {
-    position: relative;
-    right: 29px;
-}
-
-#locationHeading {
-    position: relative;
-    left: 5px;
-}
-
-#dateHeading {
-    position: relative;
-    left: 32px;
-}
-
-#timeHeading {
-    position: relative;
-    left: 20px;
-    
-}
-
-#location{
-    position: relative;
-    left: 10px;
-}
-
-#date{
-    position: relative;
-    left: 20px;
-}
-
-#time{
-    position: relative;
-    left: 40px;
-}
-
-#event {
-    position: relative;
-    left: 120px;
-    bottom: 27px;
-}
-
-#email {
-    position: relative;
-    left: 130px;
-    bottom: 27px;
-}
-
-#phone {
-    position: relative;
-    left: 120px;
-    bottom: 26px;
-}
-
-#confirmtxt {
-    position: relative;
-    right: 60px;
-}
-
-#submit {
-    position: absolute;
-    top: 400px;
-    left: 200px;
-}
-
-#back {
-    position: absolute;
-    top: 400px;
-    left: 100px; 
-}
-
-#bookingconfirm {
-    position: relative;
-    left: 60px;
-    top: 50px;
-}
