@@ -55,13 +55,17 @@
     </nav>
     <!-- Content Section -->
     <div id="content_section">
-        <div id="page_title">
-            <h1>Account</h1>
-        </div>
-        <div id="user_image_container">
+        <header>
+            <div id="page_title">
+                <h1>Account</h1>
+            </div>
             <img src="images/user1.jpg" alt="Avatar" class="avatar">
-            <span id="user_name">Ravinder Shokar</span>
-        </div>
+            <span id="user_name"></span>
+            <div id="freinds_exposures">
+                <span id="freinds">Freinds</span>
+                <span id="exposures">Exposures</span>
+            </div>
+        </header>
         <div id="user_setting">
             <span>USER SETTINGS</span>
             <div class=button id="my_account" onclick="expandAccount()"><i id="my_account_icon"></i>My Account</div>
@@ -78,13 +82,13 @@
                     <a id="submit_edit_user" class="btn btn-primary">Submit</a>
                 </form>
             </div>
-            <div class=button><i id="freinds_icon"></i>Friends</div>
-            <div class=button><i id="exposures_icon"></i>Exposures</div>
             <div class=button><i id="event_history_icon"></i>Event History</div>
             <div class=button><i id="dark_mode_icon"></i>Dark Mode</div>
             <div class=button><a id="logout">Log Out</a></div>
         </div>
     </div>
+
+
 
     <!-- Mobile Navigation Bar -->
     <footer id="mobile-nav-bar">

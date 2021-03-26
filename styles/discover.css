@@ -1,0 +1,110 @@
+
+
+#page_title {
+    width: 100%;
+
+}
+
+#page_title h1{
+    text-align: center;
+    font-size: 15pt;
+    color: white;
+}
+
+/* This is where you will find CSS for discover_events */
+.box {
+    width: 100%;
+    overflow:hidden;
+    color: white;
+    background: #4fcdff;
+}
+.box:hover {
+    background-color: #4B5358;
+}
+
+
+.event_name {
+    padding-left: .5em;
+    font-size: 15pt;
+    text-align: left;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 30px;
+    font-weight: bold;
+}
+
+.event_address {
+    padding-left: .5em;
+    font-size: 11pt;
+    text-align: left;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 20px;
+}
+
+.raiting_container {
+    padding-left: .5em;
+    margin: 0 auto;
+    margin-top: .1em;
+}
+
+.categories {
+    padding-left: .5em;
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: left;
+}
+
+.image_container {
+    width: 100%;
+    background: white;
+    padding-bottom: .5em;
+}
+/* End of discover_events */
+
+/* Desktop */
+@media only screen and (min-width : 1081px) {
+    #page_title h1 {
+        text-align: center;
+    }
+
+    /* This is where you will find CSS for discover_events */
+    .box {
+        max-width: 375px;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    /* End of discover_events */
+}
+
+/* Tablet Devices */
+@media only screen and  (min-width : 601px) and (max-width : 1080px) {
+    /* This is where you will find CSS for discover_events */
+    .box {
+        max-width: 300px;
+         margin-right: 1em;
+        margin-left: 1em;
+    }
+    /* End of discover_events */
+}
+
+/*  Mobile Devices */
+@media screen and (max-width: 600px) {
+    body {
+        background: #4fcdff;
+    }
+
+    /* This is where you will find CSS for discover_events */
+    .box {
+        margin: 0 auto;
+
+    }
+
+    .box img{
+        margin: 0 auto;
+        margin-top: 1em;
+    }
+ 
+    /* End of discover_events */
+}

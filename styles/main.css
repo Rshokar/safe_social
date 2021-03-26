@@ -112,12 +112,13 @@ p {
 }
 
 #desktop-nav-bar{
-    background-color: #1c4587;
+    background: #4fcdff;
+    /*background: linear-gradient(90deg, rgba(2,191,255,1) 0%, rgba(79,205,255,1) 50%, rgba(2,191,255,1) 100%);
+    */
 }
 
 .mobile-bottom-nav {
     visibility: hidden;
-    background-color: #1c4587;
 }
 
 
@@ -142,96 +143,25 @@ p {
     line-height: 50px;
 }
 
-/* This is where you will find CSS for discover_events */
-.box {
-    width: 100%;
-    margin-top: 1em;
-    overflow:hidden;
-}
-.box:hover {
-    background-color: #f7f7f7d8;
-}
-
-.event_name {
-    padding-left: .5em;
-    font-size: 15pt;
-    text-align: left;
-    margin: 0 auto;
-    overflow: hidden;
-    height: 30px;
-    font-weight: bold;
-}
-
-.event_address {
-    padding-left: .5em;
-    font-size: 11pt;
-    text-align: left;
-    margin: 0 auto;
-    overflow: hidden;
-    height: 20px;
-}
-
-.raiting_container {
-    padding-left: .5em;
-    margin: 0 auto;
-    margin-top: .1em;
-}
-
-.categories {
-    padding-left: .5em;
-    display: inline-block;
-    margin: 0 auto;
-    width: 100%;
-    text-align: left;
-}
-/* End of discover_events */
-
 
 /* Desktop */
 @media only screen and (min-width : 1081px) {
-
-
-    #page_title h1 {
-        text-align: center;
-    }
-
-    /* This is where you will find CSS for discover_events */
-    .box {
-        max-width: 375px;
-        margin-right: 1em;
-        margin-left: 1em;
-    }
-    /* End of discover_events */
 }
 
 /* Tablet Devices */
 @media only screen and  (min-width : 601px) and (max-width : 1080px) {
-    /* This is where you will find CSS for discover_events */
-    .box {
-        max-width: 300px;
-         margin-right: 1em;
-        margin-left: 1em;
-    }
-    /* End of discover_events */
 }
 
 /*  Mobile Devices */
 @media screen and (max-width: 600px) {
 
     #content_section {
-        width: 90%;
+        width: 100%;
     }
 
     #page_title h1 {
         text-align: left;
     }
-
-    /* This is where you will find CSS for discover_events */
-    .box {
-        margin: 0 auto;
-        margin-top: 1em;
-    }
-    /* End of discover_events */
 
     #desktop-nav-bar {
         display: none;
@@ -249,12 +179,12 @@ p {
         z-index: 1000;
         display: flex;
         height: 50px;
-        box-shadow: 0 -2px 5px -2px #333;
-        background-color: #1c4587;
+        background: #4fcdff;
+        /*background: linear-gradient(90deg, rgba(2,191,255,1) 0%, rgba(79,205,255,1) 50%, rgba(2,191,255,1) 100%);
+        */
     }
-
     .mobile-bottom-nav i {
-        color: white;
+        color: rgb(255, 255, 255);
     }
 
     .mobile_nav_links {

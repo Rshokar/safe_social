@@ -10,11 +10,12 @@ $(document).ready(function () {
   ]
 
   for (i = 0; i < eventLocation.length; i++) {
-    $("#content_section").append(createDiscoverEvent(eventLocation[i]).append(createImages())).append(createSlider())
+    $("#content_section").append(createDiscoverEvent(eventLocation[i]))
   }
 
   function createDiscoverEvent(inData) {
     let container = createBox()
+    container.append(createImages())
     container.append(createTitle(inData[0]))
     container.append(createAddress(inData[1]))
     container.append(createRating(inData[2]))
@@ -25,9 +26,6 @@ $(document).ready(function () {
   function createBox() {
     let box = $("<div></div>");
     box.addClass("box");
-    box.css({
-      "border": "2px solid #1324bf",
-    })
     return box
   }
 
@@ -49,6 +47,8 @@ $(document).ready(function () {
 
     let ratingContainer = $("<div></div>");
     ratingContainer.addClass("raiting_container")
+    ratingContainer.css({
+    })
 
 
     for (y = 0; y < positive; y++) {
@@ -93,7 +93,6 @@ $(document).ready(function () {
     let slider = $("<div>=</div>");
     slider.addClass("slider");
     slider.css({
-      "background-color": "#1c4587",
       "height": "20px",
       "width": "100%",
       "color": "white",
@@ -104,10 +103,12 @@ $(document).ready(function () {
   }
 
   function createImages() {
+    let image_container = $("<div><div>")
+    image_container.addClass("image_container");
+    let image = $("<img src='images/account.png'>");
 
-    let image = $("<img src='images/account.png'>")
-    image.hide()
-    return image;
+    image_container.append(image)
+    return image_container;
   }
 });
 

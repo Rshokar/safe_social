@@ -2,7 +2,7 @@
 Author Ravinder Shokar
 version 1.0 
 
-Java script for account.html
+JavaScript for account.html
 */
 
 /* This function updates the user name in the account page */
