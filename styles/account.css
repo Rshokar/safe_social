@@ -5,7 +5,7 @@
 header {
     width: 100%;
     height: 40vh;
-    background: #4fcdff;
+    background: #EE964b;
     color: white;
 }
 #page_title {
@@ -76,7 +76,7 @@ header {
 
 #my_account_form {
     margin: 0 auto;
-    background-color: #4fcdff;
+    background-color: #99A1A3;
     width: 100%;
 }
 

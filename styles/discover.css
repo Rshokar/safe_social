@@ -16,7 +16,7 @@
     width: 100%;
     overflow:hidden;
     color: white;
-    background: #4fcdff;
+    background: #EE964b;
 }
 .box:hover {
     background-color: #4B5358;
@@ -92,7 +92,7 @@
 /*  Mobile Devices */
 @media screen and (max-width: 600px) {
     body {
-        background: #4fcdff;
+        background: #DA8158;
     }
 
     /* This is where you will find CSS for discover_events */
