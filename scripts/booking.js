@@ -15,3 +15,4 @@ function setDataBooking() {
 
 setDataBooking();
 
+console.log(firebase.auth().currentUser)

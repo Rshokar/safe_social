@@ -1,9 +1,10 @@
 let restricted = ["account.html", "exposures.html", "bookingconfirm.html", "booking.html", "events.html"]
 
-firebase.auth().onAuthStateChanged(function (user) {
+auth.onAuthStateChanged(function (user) {
     if (user) {
         console.log("user logged in")
         console.log(user.displayName)
+        window.CURRENT_USER = user;
     } else {
         let url = window.location.href
         url = url.split("/")

@@ -61,12 +61,46 @@
             </div>
             <img src="images/user1.jpg" alt="Avatar" class="avatar">
             <span id="user_name"></span>
-            <div id="freinds_exposures">
-                <span id="freinds">Freinds</span>
-                <span id="exposures">Exposures</span>
+            <div id="freinds_exposures_settings">
+                <span id="freinds_tab" class="tab">Freinds</span>
+                <span id="exposures_tab" class="tab">Exposures</span>
+                <span id="account_tab" class="tab">My Info</span>
             </div>
         </header>
-        <div id="user_setting">
+        <div id="user_setting" class="page">
+            <span>USER SETTINGS</span>
+            <div class=button id="my_account" onclick="expandAccount()"><i id="my_account_icon"></i>My Account</div>
+            <div id="my_account_form" style="display:none">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Name</label>
+                        <input type="email" class="form-control" id="inputName" aria-describedby="emailHelp">
+                    </div>
+                    <a id="submit_edit_user" class="btn btn-primary">Submit</a>
+                </form>
+            </div>
+            <div class=button><i id="event_history_icon"></i>Event History</div>
+            <div class=button><i id="dark_mode_icon"></i>Dark Mode</div>
+            <div class=button><a id="logout">Log Out</a></div>
+        </div>
+
+        <div id="freinds" class="page">
+            <span>USER FREINDS</span>
+            <table id="freinds_list">
+                <tr>
+                    <td>
+                        <span class='freind_name'>Brendan Lin</span>
+                    </td>
+                    <td><span class='action_button'>remove</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="expsorues" class="page">
             <span>USER SETTINGS</span>
             <div class=button id="my_account" onclick="expandAccount()"><i id="my_account_icon"></i>My Account</div>
             <div id="my_account_form" style="display:none">
@@ -136,12 +170,11 @@
         </script>
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="scripts/firebase_api.js"></script>
-    <script>
-        const auth = firebase.auth();
-    </script>
+
 
 
 
@@ -159,6 +192,7 @@
 
     <!-- Account page java script file -->
     <script src="scripts/account.js"></script>
+
 </body>
 
 </html>
