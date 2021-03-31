@@ -11,7 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
   <!-- Optional styles and scripts of your own -->
   <link href="styles/main.css" rel="stylesheet">
@@ -57,66 +57,15 @@
     </div>
   </nav>
 
+  <!-------------------------------------->
+  <!-- Put Content Here -->
+  <!-------------------------------------->
+  <div id="contnet_section">
+    <h1></h1>
+  </div>
 
-  <div class="container">
-    <h1 class="display-4">Event Listing</h1>
-  </div>
-  <div class="container">
-    <div class="list-group" id="eventlist">
-      <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">Sunset Community Center</h5>
-          <small>2 days ago</small>
-        </div>
-        <small>March 12th, 2021</small>
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">Esquire Basketball Park</h5>
-          <small class="text-muted">1 days ago</small>
-        </div>
-        <small class="text-muted">March 12th, 2021</small>
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">Vancouver Skate Park</h5>
-          <small class="text-muted">50 minutes ago</small>
-        </div>
-        <small class="text-muted">March 12th, 2021</small>
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">Stanley Park</h5>
-          <small class="text-muted">5 days ago</small>
-        </div>
-        <small class="text-muted">March 12th, 2021</small>
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">Vancouver Aquarium</h5>
-          <small class="text-muted">50 minutes ago</small>
-        </div>
-        <small class="text-muted">March 12th, 2021</small>
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">YMCA</h5>
-          <small class="text-muted">4 days ago</small>
-        </div>
-        <small class="text-muted">April 1st, 2021</small>
-      </a>
-      <a href="#" class="list-group-item list-group-item-action">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1">Vancouver Skate Park</h5>
-          <small class="text-muted">50 minutes ago</small>
-        </div>
-        <small class="text-muted">March 12th, 2021</small>
-      </a>
-      </a>
-      </a>
-    </div>
-  </div>
-  </nav>
+
+
 
   <!-- Mobile Navigation Bar -->
   <footer id="mobile-nav-bar">
@@ -170,7 +119,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-  </script>
+    </script>
 
   <!-- Link to the api keys for your firebase project -->
   <script src="scripts/firebase_api.js"></script>
@@ -181,50 +130,15 @@
 
   <!-- Runs every time the file is opened -->
   <script src="scripts/on_run.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-  <script>
-    function readEvent() {
-
-      var id = firebase.auth().onAuthStateChanged(function (user) {
-        console.log(user.uid);
-
-        var id = user.uid;
-        let tableData = [];
-
-        db.collection("Event").where("UID", "==", id)
-          .get()
-          .then(function (snap) {
-            snap.forEach(function (doc) {
-              $(document).ready(function () {
-
-                var location = doc.data().Location;
-                var date = doc.data().Date;
-                //console.log(location);
-                //console.log(date);
-
-                  tableData.push($("<a href='#' class='list-group-item list-group-item-action'>" +
-                  "<div class='d-flex w-100 justify-content-between'>" +
-                  "<h5 class='mb-1'>" + location + "</h5>" +
-                  "<small class='text-muted'>A few seconds ago</small>" +
-                  "</div>" +
-                  "<small class='text-muted'>" + date + "</small>" +
-                  "</a>"));
-
-                console.log(tableData[1]);
-                $("#eventlist").append(tableData);
-              });
 
 
-            })
-
-
-          })
-      });
-    }
-
+  <script src="scripts/events.js">
     readEvent();
   </script>
+  <!-- Custom js for events.html -->
+  <!-- <script src="scripts/events.js"></script> -->
+
+
 
 </body>
 

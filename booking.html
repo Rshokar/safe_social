@@ -13,6 +13,7 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
     <!-- Optional styles and scripts of your own -->
     <link href="styles/main.css" rel="stylesheet">
 
@@ -65,9 +66,25 @@
             <br />
         </div>
         <div class="form-group row">
+            <label for="example-email-input" class="col-2 col-form-label">Email</label>
+            <div class="col-10">
+                <input class="form-control" type="email" placeholder="Email Address" id="example-email-input">
+            </div>
+            <br />
+            <br />
+        </div>
+        <div class="form-group row">
+            <label for="example-tel-input" class="col-2 col-form-label">Phone</label>
+            <div class="col-10">
+                <input class="form-control" type="tel" placeholder="Phone Number" id="example-tel-input">
+            </div>
+            <br />
+            <br />
+        </div>
+        <div class="form-group row">
             <label for="example-password-input" class="col-2 col-form-label">Location</label>
             <div class="col-10">
-                <input class="form-control" type="text" placeholder="Event Location" id="example-password-input">
+                <input class="form-control" type="text" placeholder="Vancouver" id="example-password-input">
             </div>
             <br />
             <br />
@@ -75,7 +92,7 @@
         <div class="form-group row">
             <label for="example-date-input" class="col-2 col-form-label">Date</label>
             <div class="col-10">
-                <input class="form-control" type="date" placeholder="2011-08-19" id="example-date-input">
+                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
             </div>
             <br />
             <br />
@@ -92,12 +109,10 @@
         </button>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Add friends
+            Add Friends
         </button>
-
-        <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-            class="modal-dialog modal-dialog-scrollable">
+        class="modal-dialog modal-dialog-scrollable">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -281,6 +296,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                      </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -346,11 +362,8 @@
 
                 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
                 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
                 <script src="scripts/firebase_api.js"></script>
-                <script>
-                    const auth = firebase.auth();
-                    const db = firebase.firestore();
-                </script>
 
                 <!--------------------------------------------------------------------->
                 <!-- JS files: Your own JavaScript functions included here    -->

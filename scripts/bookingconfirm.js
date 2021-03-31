@@ -1,13 +1,12 @@
+
 //print data from localstorage
 function getDataBooking2() {
     var myObj = JSON.parse(localStorage.getItem('formdata'));
-    console.log(myObj);
     document.getElementById("event").innerHTML = myObj.event;
     document.getElementById("location").innerHTML = myObj.location;
     document.getElementById("date").innerHTML = myObj.date;
     document.getElementById("time").innerHTML = myObj.time;
 }
-
 getDataBooking2();
 
 //write to database
@@ -49,10 +48,7 @@ function writeGuests() {
         Test: "Testing"
     });
     });
-});
-
-    
-    
+}); 
 }
 
 //writeGuests();
