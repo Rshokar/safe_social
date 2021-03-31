@@ -102,6 +102,7 @@ $('#freinds_search_bar').on('input', function () {
         .where('name', '<', query + 'z')
         .get()
         .then((querySnapshot) => {
+            $('#user_list').empty();
             querySnapshot.forEach((doc) => {
                 inUser = doc.data();
                 let inHtml = "<tr> <td><span class='user_name'>" + inUser.name + "</span></td><td><button id='" + doc.id + "' class='action_button'>Add</button></td></tr>"
@@ -115,9 +116,13 @@ $('#freinds_search_bar').on('input', function () {
         .catch((error) => {
             console.log("Error getting documents: ".error);
         });
+
+
 });
 
-/** The click functions bellow control which page is showing on account.html */
+/** The click functions bellow control which page is showing on account.html
+ * They do this by changing the CSS display setting and the color of the tabs.   
+ */
 function cleanPages() {
     $('.tab').css({
         'background-color': '#EE964b',
@@ -181,7 +186,8 @@ function addFreindListner(id, name) {
             db.collection('users')
                 .doc(auth.currentUser.uid)
                 .collection('freinds')
-                .add(obj)
+                .doc(id)
+                .set(obj)
                 .then(function () {
                     console.log("added freind DB");
                     $(id).css({
