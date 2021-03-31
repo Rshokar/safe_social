@@ -89,14 +89,19 @@
         </div>
 
         <div id="freinds" class="page">
-            <span>USER FREINDS</span>
+            <div class="form-outline" id='freinds_search'>
+                <input id='freinds_search_bar' type="text" id="form1" class="form-control" placeholder="Search"
+                    aria-label="Search" />
+            </div>
+            <br>
+
+            <!-- Table containing freinds. -->
             <table id="freinds_list">
-                <tr>
-                    <td>
-                        <span class='freind_name'>Brendan Lin</span>
-                    </td>
-                    <td><span class='action_button'>remove</span></td>
-                </tr>
+            </table>
+
+            <!-- Table containing queried users. -->
+            <table id="user_list">
+
             </table>
         </div>
 

@@ -2,376 +2,520 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Booking</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="author" content="BCIT">
+  <meta charset="utf-8">
+  <title>Booking</title>
+  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <meta name="author" content="BCIT">
 
-    <!-- Bootstrap for Mobile-first, and JQuery -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap for Mobile-first, and JQuery -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-    <!-- Optional styles and scripts of your own -->
-    <link href="styles/main.css" rel="stylesheet">
+  <!-- Optional styles and scripts of your own -->
+  <link href="styles/main.css" rel="stylesheet">
 
 </head>
 
 <body>
-    <!-- Desktop and Tablet Navigation Bar -->
-    <nav id="desktop-nav-bar" class="navbar navbar-expand-lg navbar-light">
-        <div id="nav_container" class="container-fluid">
-            <a class="navbar-brand" href="index.html">Safe Social</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="events.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="discover.html">Discover</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="account.html">Account</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="booking.html">New</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="login.html">Sign Up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="login.html">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Put Content Here -->
-    <!-------------------------------------->
+  <!-- Desktop and Tablet Navigation Bar -->
+  <nav id="desktop-nav-bar" class="navbar navbar-expand-lg navbar-light">
+    <div id="nav_container" class="container-fluid">
+      <a class="navbar-brand" href="index.html">Safe Social</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="discover.html">Discover</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="account.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="booking.html">New</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="login.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Put Content Here -->
+  <!-------------------------------------->
 
-    <div class="container" id="booking">
-        <h1>Event Booking</h1>
-        <div class="form-group row">
-            <label for="example-text-input" class="col-2 col-form-label">Event</label>
-            <div class="col-10">
-                <input class="form-control" type="text" placeholder="Event Name" id="example-text-input">
-            </div>
-            <br />
-            <br />
-        </div>
-        <div class="form-group row">
-            <label for="example-email-input" class="col-2 col-form-label">Email</label>
-            <div class="col-10">
-                <input class="form-control" type="email" placeholder="Email Address" id="example-email-input">
-            </div>
-            <br />
-            <br />
-        </div>
-        <div class="form-group row">
-            <label for="example-tel-input" class="col-2 col-form-label">Phone</label>
-            <div class="col-10">
-                <input class="form-control" type="tel" placeholder="Phone Number" id="example-tel-input">
-            </div>
-            <br />
-            <br />
-        </div>
-        <div class="form-group row">
-            <label for="example-password-input" class="col-2 col-form-label">Location</label>
-            <div class="col-10">
-                <input class="form-control" type="text" placeholder="Vancouver" id="example-password-input">
-            </div>
-            <br />
-            <br />
-        </div>
-        <div class="form-group row">
-            <label for="example-date-input" class="col-2 col-form-label">Date</label>
-            <div class="col-10">
-                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-            </div>
-            <br />
-            <br />
-        </div>
-        <div class="form-group row">
-            <label for="example-time-input" class="col-2 col-form-label">Time</label>
-            <div class="col-10">
-                <input class="form-control" type="time" value="13:45:00" id="example-time-input">
-            </div>
-        </div>
-
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Submit
-        </button>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Add Friends
-        </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+  <div class="container" id="booking">
+    <h1>Event Booking</h1>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-2 col-form-label">Event</label>
+      <div class="col-10">
+        <input class="form-control" type="text" placeholder="Event Name" id="example-text-input">
+      </div>
+      <br />
+      <br />
+    </div>
+    <div class="form-group row">
+      <label for="example-email-input" class="col-2 col-form-label">Email</label>
+      <div class="col-10">
+        <input class="form-control" type="email" placeholder="Email Address" id="example-email-input">
+      </div>
+      <br />
+      <br />
+    </div>
+    <div class="form-group row">
+      <label for="example-tel-input" class="col-2 col-form-label">Phone</label>
+      <div class="col-10">
+        <input class="form-control" type="tel" placeholder="Phone Number" id="example-tel-input">
+      </div>
+      <br />
+      <br />
+    </div>
+    <div class="form-group row">
+      <label for="example-password-input" class="col-2 col-form-label">Location</label>
+      <div class="col-10">
+        <input class="form-control" type="text" placeholder="Vancouver" id="example-password-input">
+      </div>
+      <br />
+      <br />
+    </div>
+    <div class="form-group row">
+      <label for="example-date-input" class="col-2 col-form-label">Date</label>
+      <div class="col-10">
+        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+      </div>
+      <br />
+      <br />
+    </div>
+    <div class="form-group row">
+      <label for="example-time-input" class="col-2 col-form-label">Time</label>
+      <div class="col-10">
+        <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#exampleModal">
+      Submit
+      </button>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Add Friends
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
         class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Friends List</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Friends List</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="people-nearby">
+                      <div class="nearby-user">
+                        <div class="row">
+                          <div class="col-md-2 col-sm-2">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user"
+                              class="profile-photo-lg">
+                          </div>
+                          <div class="col-md-7 col-sm-7">
+                            <h5><a href="#" class="profile-link">Sophia Page</a></h5>
+                          </div>
+                          <div class="col-md-3 col-sm-3">
+                            <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                          </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <div class="container">
+                    <div class="nearby-user">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user"
+                            class="profile-photo-lg">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                          <h5><a href="#" class="profile-link">Emma Johnson</a></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                          <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nearby-user">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="user"
+                            class="profile-photo-lg">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                          <h5><a href="#" class="profile-link">Nora Wilson</a></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                          <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nearby-user">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="user"
+                            class="profile-photo-lg">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                          <h5><a href="#" class="profile-link">Diana Amber</a></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                          <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nearby-user">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user"
+                            class="profile-photo-lg">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                          <h5><a href="#" class="profile-link">Addison Thomas</a></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                          <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nearby-user">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="user"
+                            class="profile-photo-lg">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                          <h5><a href="#" class="profile-link">Jonathon Thompson</a></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                          <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nearby-user">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user"
+                            class="profile-photo-lg">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                          <h5><a href="#" class="profile-link">Olivia Steward</a></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                          <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nearby-user">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user"
+                            class="profile-photo-lg">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                          <h5><a href="#" class="profile-link">Elena Foster</a></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                          <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nearby-user">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="user"
+                            class="profile-photo-lg">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                          <h5><a href="#" class="profile-link">Brian Walton</a></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                          <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="nearby-user">
+                      <div class="row">
+                        <div class="col-md-2 col-sm-2">
+                          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user"
+                            class="profile-photo-lg">
+                        </div>
+                        <div class="col-md-7 col-sm-7">
+                          <h5><a href="#" class="profile-link">Cris Haris</a></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                          <button class="btn btn-primary pull-right" onclick="addFriend()">Add Friend</button>
+                        </div>
+                        =======
+                        <div class="nearby-user">
+                          <div class="row">
+                            <div class="col-md-2 col-sm-2">
+                              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user"
+                                class="profile-photo-lg">
+                            </div>
+                            <div class="col-md-7 col-sm-7">
+                              <h5><a href="#" class="profile-link">Sophia Page</a></h5>
+                            </div>
+                            <div class="col-md-3 col-sm-3">
+                              <button class="btn btn-primary pull-right">Add Friend</button>
+                            </div>
+                          </div>
+                          <div class="nearby-user">
                             <div class="row">
-                                <div class="col-md-8">
-                                    <div class="people-nearby">
-                                        <div class="nearby-user">
-                                            <div class="row">
-                                                <div class="col-md-2 col-sm-2">
-                                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                                                        alt="user" class="profile-photo-lg">
-                                                </div>
-                                                <div class="col-md-7 col-sm-7">
-                                                    <h5><a href="#" class="profile-link">Sophia Page</a></h5>
-                                                </div>
-                                                <div class="col-md-3 col-sm-3">
-                                                    <button class="btn btn-primary pull-right">Add Friend</button>
-                                                </div>
-                                            </div>
-                                            <div class="nearby-user">
-                                                <div class="row">
-                                                    <div class="col-md-2 col-sm-2">
-                                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png"
-                                                            alt="user" class="profile-photo-lg">
-                                                    </div>
-                                                    <div class="col-md-7 col-sm-7">
-                                                        <h5><a href="#" class="profile-link">Emma Johnson</a></h5>
-                                                    </div>
-                                                    <div class="col-md-3 col-sm-3">
-                                                        <button class="btn btn-primary pull-right">Add Friend</button>
-                                                    </div>
-                                                    <div class="nearby-user">
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-sm-2">
-                                                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png"
-                                                                    alt="user" class="profile-photo-lg">
-                                                            </div>
-                                                            <div class="col-md-7 col-sm-7">
-                                                                <h5><a href="#" class="profile-link">Emma Johnson</a>
-                                                                </h5>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-3">
-                                                                <button class="btn btn-primary pull-right">Add
-                                                                    Friend</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nearby-user">
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-sm-2">
-                                                                <img src="https://bootdey.com/img/Content/avatar/avatar5.png"
-                                                                    alt="user" class="profile-photo-lg">
-                                                            </div>
-                                                            <div class="col-md-7 col-sm-7">
-                                                                <h5><a href="#" class="profile-link">Nora Wilson</a>
-                                                                </h5>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-3">
-                                                                <button class="btn btn-primary pull-right">Add
-                                                                    Friend</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nearby-user">
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-sm-2">
-                                                                <img src="https://bootdey.com/img/Content/avatar/avatar4.png"
-                                                                    alt="user" class="profile-photo-lg">
-                                                            </div>
-                                                            <div class="col-md-7 col-sm-7">
-                                                                <h5><a href="#" class="profile-link">Diana Amber</a>
-                                                                </h5>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-3">
-                                                                <button class="btn btn-primary pull-right">Add
-                                                                    Friend</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nearby-user">
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-sm-2">
-                                                                <img src="https://bootdey.com/img/Content/avatar/avatar3.png"
-                                                                    alt="user" class="profile-photo-lg">
-                                                            </div>
-                                                            <div class="col-md-7 col-sm-7">
-                                                                <h5><a href="#" class="profile-link">Addison Thomas</a>
-                                                                </h5>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-3">
-                                                                <button class="btn btn-primary pull-right">Add
-                                                                    Friend</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nearby-user">
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-sm-2">
-                                                                <img src="https://bootdey.com/img/Content/avatar/avatar2.png"
-                                                                    alt="user" class="profile-photo-lg">
-                                                            </div>
-                                                            <div class="col-md-7 col-sm-7">
-                                                                <h5><a href="#" class="profile-link">Jonathon
-                                                                        Thompson</a>
-                                                                </h5>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-3">
-                                                                <button class="btn btn-primary pull-right">Add
-                                                                    Friend</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nearby-user">
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-sm-2">
-                                                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                                                                    alt="user" class="profile-photo-lg">
-                                                            </div>
-                                                            <div class="col-md-7 col-sm-7">
-                                                                <h5><a href="#" class="profile-link">Olivia Steward</a>
-                                                                </h5>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-3">
-                                                                <button class="btn btn-primary pull-right">Add
-                                                                    Friend</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nearby-user">
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-sm-2">
-                                                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png"
-                                                                    alt="user" class="profile-photo-lg">
-                                                            </div>
-                                                            <div class="col-md-7 col-sm-7">
-                                                                <h5><a href="#" class="profile-link">Elena Foster</a>
-                                                                </h5>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-3">
-                                                                <button class="btn btn-primary pull-right">Add
-                                                                    Friend</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nearby-user">
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-sm-2">
-                                                                <img src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                                                    alt="user" class="profile-photo-lg">
-                                                            </div>
-                                                            <div class="col-md-7 col-sm-7">
-                                                                <h5><a href="#" class="profile-link">Brian Walton</a>
-                                                                </h5>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-3">
-                                                                <button class="btn btn-primary pull-right">Add
-                                                                    Friend</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="nearby-user">
-                                                        <div class="row">
-                                                            <div class="col-md-2 col-sm-2">
-                                                                <img src="https://bootdey.com/img/Content/avatar/avatar7.png"
-                                                                    alt="user" class="profile-photo-lg">
-                                                            </div>
-                                                            <div class="col-md-7 col-sm-7">
-                                                                <h5><a href="#" class="profile-link">Cris Haris</a></h5>
-                                                            </div>
-                                                            <div class="col-md-3 col-sm-3">
-                                                                <button class="btn btn-primary pull-right">Add
-                                                                    Friend</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      </div>
-                                    </div>
+                              <div class="col-md-2 col-sm-2">
+                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user"
+                                  class="profile-photo-lg">
+                              </div>
+                              <div class="col-md-7 col-sm-7">
+                                <h5><a href="#" class="profile-link">Emma Johnson</a></h5>
+                              </div>
+                              <div class="col-md-3 col-sm-3">
+                                <button class="btn btn-primary pull-right">Add Friend</button>
+                              </div>
+                              <div class="nearby-user">
+                                <div class="row">
+                                  <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user"
+                                      class="profile-photo-lg">
+                                  </div>
+                                  <div class="col-md-7 col-sm-7">
+                                    <h5><a href="#" class="profile-link">Emma Johnson</a>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right">Add
+                                      Friend</button>
+                                  </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                              </div>
+                              <div class="nearby-user">
+                                <div class="row">
+                                  <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="user"
+                                      class="profile-photo-lg">
+                                  </div>
+                                  <div class="col-md-7 col-sm-7">
+                                    <h5><a href="#" class="profile-link">Nora Wilson</a>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right">Add
+                                      Friend</button>
+                                  </div>
                                 </div>
+                              </div>
+                              <div class="nearby-user">
+                                <div class="row">
+                                  <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="user"
+                                      class="profile-photo-lg">
+                                  </div>
+                                  <div class="col-md-7 col-sm-7">
+                                    <h5><a href="#" class="profile-link">Diana Amber</a>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right">Add
+                                      Friend</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nearby-user">
+                                <div class="row">
+                                  <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user"
+                                      class="profile-photo-lg">
+                                  </div>
+                                  <div class="col-md-7 col-sm-7">
+                                    <h5><a href="#" class="profile-link">Addison Thomas</a>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right">Add
+                                      Friend</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nearby-user">
+                                <div class="row">
+                                  <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="user"
+                                      class="profile-photo-lg">
+                                  </div>
+                                  <div class="col-md-7 col-sm-7">
+                                    <h5><a href="#" class="profile-link">Jonathon
+                                        Thompson</a>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right">Add
+                                      Friend</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nearby-user">
+                                <div class="row">
+                                  <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user"
+                                      class="profile-photo-lg">
+                                  </div>
+                                  <div class="col-md-7 col-sm-7">
+                                    <h5><a href="#" class="profile-link">Olivia Steward</a>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right">Add
+                                      Friend</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nearby-user">
+                                <div class="row">
+                                  <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="user"
+                                      class="profile-photo-lg">
+                                  </div>
+                                  <div class="col-md-7 col-sm-7">
+                                    <h5><a href="#" class="profile-link">Elena Foster</a>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right">Add
+                                      Friend</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nearby-user">
+                                <div class="row">
+                                  <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="user"
+                                      class="profile-photo-lg">
+                                  </div>
+                                  <div class="col-md-7 col-sm-7">
+                                    <h5><a href="#" class="profile-link">Brian Walton</a>
+                                    </h5>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right">Add
+                                      Friend</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="nearby-user">
+                                <div class="row">
+                                  <div class="col-md-2 col-sm-2">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="user"
+                                      class="profile-photo-lg">
+                                  </div>
+                                  <div class="col-md-7 col-sm-7">
+                                    <h5><a href="#" class="profile-link">Cris Haris</a></h5>
+                                  </div>
+                                  <div class="col-md-3 col-sm-3">
+                                    <button class="btn btn-primary pull-right">Add
+                                      Friend</button>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                    <br />
-                    <br />
-                    <br />
-                    <a href="bookingconfirm.html"><button class="btn btn-primary" type="submit"
-                            onclick="setDataBooking()">Next</button></a>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
                 </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <br />
+            <a href="bookingconfirm.html"><button class="btn btn-primary" type="submit"
+                onclick="setDataBooking()">Next</button></a>
+          </div>
 
-                <!-- Mobile Navigation Bar -->
-                <footer id="mobile-nav-bar">
-                    <nav class="mobile-bottom-nav">
-                        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
-                            <div class="mobile-bottom-nav__item-content">
-                                <a id="mobile_nav_links" href="events.html">
-                                    <img src="images/events.png" class="mobile-nav-bar-icon">
-                                    <i class="material-icons">Events</i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mobile-bottom-nav__item">
-                            <div class="mobile-bottom-nav__item-content">
-                                <a id="mobile_nav_links" href="discover.html">
-                                    <img src="images/discover.png" class="mobile-nav-bar-icon">
-                                    <i class="material-icons">Discover</i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mobile-bottom-nav__item">
-                            <div class="mobile-bottom-nav__item-content">
-                                <a id="mobile_nav_links" href="account.html">
-                                    <img src="images/account.png" class="mobile-nav-bar-icon">
-                                    <i class="material-icons">Account</i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mobile-bottom-nav__item">
-                            <div class="mobile-bottom-nav__item-content">
-                                <a id="mobile_nav_links" href="booking.html">
-                                    <img src="images/plus.png" class="mobile-nav-bar-icon">
-                                    <i class="material-icons">New</i>
-                                </a>
-                            </div>
-                        </div>
-                    </nav>
-                </footer>
+          <!-- Mobile Navigation Bar -->
+          <footer id="mobile-nav-bar">
+            <nav class="mobile-bottom-nav">
+              <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+                <div class="mobile-bottom-nav__item-content">
+                  <a id="mobile_nav_links" href="events.html">
+                    <img src="images/events.png" class="mobile-nav-bar-icon">
+                    <i class="material-icons">Events</i>
+                  </a>
+                </div>
+              </div>
+              <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                  <a id="mobile_nav_links" href="discover.html">
+                    <img src="images/discover.png" class="mobile-nav-bar-icon">
+                    <i class="material-icons">Discover</i>
+                  </a>
+                </div>
+              </div>
+              <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                  <a id="mobile_nav_links" href="account.html">
+                    <img src="images/account.png" class="mobile-nav-bar-icon">
+                    <i class="material-icons">Account</i>
+                  </a>
+                </div>
+              </div>
+              <div class="mobile-bottom-nav__item">
+                <div class="mobile-bottom-nav__item-content">
+                  <a id="mobile_nav_links" href="booking.html">
+                    <img src="images/plus.png" class="mobile-nav-bar-icon">
+                    <i class="material-icons">New</i>
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </footer>
 
-                <!----------------------------------------------->
-                <!-- JS: Boostrap, Firebase, API related    -->
-                <!----------------------------------------------->
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-                    crossorigin="anonymous">
-                    </script>
+          <!----------------------------------------------->
+          <!-- JS: Boostrap, Firebase, API related    -->
+          <!----------------------------------------------->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+            </script>
 
-                <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-                <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-                <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-                <script src="scripts/firebase_api.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+          <script src="scripts/firebase_api.js"></script>
 
-                <!--------------------------------------------------------------------->
-                <!-- JS files: Your own JavaScript functions included here    -->
-                <!--------------------------------------------------------------------->
-                <script src="scripts/booking.js"></script>
+          <!--------------------------------------------------------------------->
+            <!-- JS files: Your own JavaScript functions included here    -->
+            <!--------------------------------------------------------------------->
+            <script src="scripts/booking.js"></script>
+            <script src="scripts/friends.js"></script>
+            
+            <!--------------------------------------------------------------------->
+            <!-- JS files: Your own JavaScript functions included here    -->
+            <!--------------------------------------------------------------------->
+            <script src="scripts/booking.js"></script>
+          
 
-                <!--Runs every time the file is opened -->
-                <script src="scripts/on_run.js"></script>
+            <!--Runs every time the file is opened -->
+            <script src="scripts/on_run.js"></script>
 
 </body>
 

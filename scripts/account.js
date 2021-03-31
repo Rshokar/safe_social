@@ -16,7 +16,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
 });
 
-/* This function expands the account update form */
+/* This function expands and contracts update account form */
 function expandAccount() {
     user = firebase.auth().currentUser
     div = $("#my_account")
@@ -35,9 +35,11 @@ function expandAccount() {
 
 }
 
-/* This function updates the current user email and name */
+/* This function updates users email and name in the DB*/
 $(document).ready(function () {
     user = firebase.auth().currentUser
+
+    /* This function updates users email and name in the DB*/
     $("#submit_edit_user").click(function () {
         let email = $("#inputEmail").val()
         let name = $("#inputName").val()
@@ -58,22 +60,69 @@ $(document).ready(function () {
 
     })
 
-    var freindsDoc = db.collection('users');
+    renderFreinds();
 
-    freindsDoc.get().then((doc) => {
-        if (doc.exists) {
-            console.log("Document data:", doc.data());
-        } else {
-            // doc.data() will be undefined in this case
-            console.log("No such document!");
-        }
-    }).catch((error) => {
-        console.log("Error getting document:", error);
-    });
+
 })
 
+//This meathod gets user freinds from DB and displays them to HTML
+function renderFreinds() {
+    var freindsDoc = db.collection('users');
+    freindsDoc.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log(doc.id, " => ", doc.data());
+            let user = doc.data();
+            html = "<tr><td><span class='freind_name'>" + user.name
+                + "</span></td><td><button id='" + doc.id + "' class='action_button'>Remove</button></td></tr>"
+            $('#freinds_list').append(html);
+        });
+    });
+}
 
-/** This click functions bellow control which page is showing on account.html */
+
+/* This function updates HTML when user inpnut on search bar*/
+$('#freinds_search_bar').on('input', function () {
+    var query = $('#freinds_search_bar').val();
+
+    //Empties HTML every keystroke.
+    $('#freinds_list').empty();
+    $('#user_list').empty();
+
+    //If the search bar is empty we re render freinds on the screen. 
+    if (query == "") {
+        renderFreinds();
+        return;
+    }
+
+    //Santiy check!
+    console.log(query);
+
+    //Get users that match search query and display them to HTML.
+    db.collection('users').where('name', '>=', query)
+        .where('name', '<', query + 'z')
+        .get()
+        .then((querySnapshot) => {
+            $('#user_list').empty();
+            querySnapshot.forEach((doc) => {
+                inUser = doc.data();
+                let inHtml = "<tr> <td><span class='user_name'>" + inUser.name + "</span></td><td><button id='" + doc.id + "' class='action_button'>Add</button></td></tr>"
+
+                console.log(doc.id, " => ", doc.data());
+                $('#user_list').append(inHtml);
+                addFreindListner(doc.id, inUser.name);
+
+            })
+        })
+        .catch((error) => {
+            console.log("Error getting documents: ".error);
+        });
+
+
+});
+
+/** The click functions bellow control which page is showing on account.html
+ * They do this by changing the CSS display setting and the color of the tabs.   
+ */
 function cleanPages() {
     $('.tab').css({
         'background-color': '#EE964b',
@@ -123,3 +172,29 @@ $("#account_tab").click(function () {
         'color': 'black'
     })
 })
+
+//Listener for .action_button. 
+//This listner is responsible for adding freinds to the currrent users 
+//freinds list
+function addFreindListner(id, name) {
+    document.getElementById(id)
+        .addEventListener('click', function () {
+            obj = {
+                "name": name
+            }
+            console.log(name);
+            db.collection('users')
+                .doc(auth.currentUser.uid)
+                .collection('freinds')
+                .doc(id)
+                .set(obj)
+                .then(function () {
+                    console.log("added freind DB");
+                    $(id).css({
+                        'background-color': 'black'
+                    })
+                })
+
+
+        })
+}
