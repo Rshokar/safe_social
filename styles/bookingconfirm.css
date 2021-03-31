@@ -1,0 +1,58 @@
+#confirmtxt {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    margin-top: 20%;
+}
+
+#eventHeading {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#event {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+#locationHeading {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#location {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+#dateHeading {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+#date {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+}
+
+#timeHeading {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+
+#time {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+}
+
+#submit {
+    position: absolute;
+    top: 400px;
+    left: 200px;
+}
+
+#back {
+    position: absolute;
+    top: 400px;
+    left: 100px; 
+}
