@@ -15,8 +15,8 @@ function readEvent() {
 
               var location = doc.data().Location;
               var date = doc.data().Date;
-              //console.log(location);
-              //console.log(date);
+              console.log(location);
+              console.log(date);
 
                 tableData.push($("<a href='#' class='list-group-item list-group-item-action'>" +
                 "<div class='d-flex w-100 justify-content-between'>" +
@@ -26,10 +26,11 @@ function readEvent() {
                 "<small class='text-muted'>" + date + "</small>" +
                 "</a>"));
 
-              console.log(tableData[1]);
-              $("#eventlist").append(tableData);
+              $("#content").append(tableData);
             });
           })
         })
     });
   }
+
+  readEvent();

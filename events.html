@@ -61,7 +61,11 @@
   <!-- Put Content Here -->
   <!-------------------------------------->
   <div id="contnet_section">
-    <h1></h1>
+    <h1>Events</h1>
+    
+    <div id="content" onload="createDiscoverEvents()">
+    
+    
   </div>
 
 
@@ -131,15 +135,9 @@
   <!-- Runs every time the file is opened -->
   <script src="scripts/on_run.js"></script>
 
-
-  <script src="scripts/events.js">
-    readEvent();
-  </script>
-  <!-- Custom js for events.html -->
-  <!-- <script src="scripts/events.js"></script> -->
-
-
-
+  <!-- Gets the events script -->
+  <script src="scripts/events.js"></script>
+  <script src="scripts/create_blocks.js"></script>
 </body>
 
 </html>
