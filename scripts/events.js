@@ -1,10 +1,12 @@
 //this function prints the events that the user is part of to the html page
 function readEvent() {
+  var entryCounter;
+  
   firebase.auth().onAuthStateChanged(function (user) {
     //console.log(user.uid);
     var id = user.uid;
     let tableData = [];
-    var entryCounter = 0;
+    entryCounter = 0;
 
     db.collection("Event").where("UID", "==", id)
       .get()
@@ -12,7 +14,7 @@ function readEvent() {
         snap.forEach(function (doc) {
           $(document).ready(function () {
 
-            var location = doc.data().Location;
+            var event = doc.data().Event;
             var date = doc.data().Date;
 
             //console.log(location);
@@ -25,7 +27,7 @@ function readEvent() {
               //adds the html containing the event data to the tableData array
               tableData.push($("<a href='#' class='list-group-item list-group-item-action'>" +
                 "<div class='d-flex w-100 justify-content-between'>" +
-                "<h5 class='mb-1'>" + location + "</h5>" +
+                "<h5 class='mb-1'>" + event + "</h5>" +
                 "<small class='text-muted'>A few seconds ago</small>" +
                 "</div>" +
                 "<small class='text-muted'>" + date + "</small>" +
