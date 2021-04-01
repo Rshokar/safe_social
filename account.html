@@ -62,7 +62,7 @@
             <img src="images/user1.jpg" alt="Avatar" class="avatar">
             <span id="user_name"></span>
             <div id="freinds_exposures_settings">
-                <span id="freinds_tab" class="tab">Freinds</span>
+                <span id="freinds_tab" class="tab">Friends</span>
                 <span id="exposures_tab" class="tab">Exposures</span>
                 <span id="account_tab" class="tab">My Info</span>
             </div>
@@ -105,25 +105,27 @@
             </table>
         </div>
 
+        <!-- Exposure Tab -->
         <div id="expsorues" class="page">
-            <span>USER SETTINGS</span>
-            <div class=button id="my_account" onclick="expandAccount()"><i id="my_account_icon"></i>My Account</div>
-            <div id="my_account_form" style="display:none">
+            <span><b>EXPOSURES</b></span>
+            <!--<div class=button id="my_account" onclick="expandAccount()"><i id="my_account_icon"></i>My Account</div> -->
+            <div id="my_account_form">
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Name</label>
-                        <input type="email" class="form-control" id="inputName" aria-describedby="emailHelp">
+                        <label for="exposureReport" class="form-label">Event Name</label>
+                        <input type="text" class="form-control" id="inputEmail" aria-describedby="emailHelp">
                     </div>
                     <a id="submit_edit_user" class="btn btn-primary">Submit</a>
                 </form>
             </div>
-            <div class=button><i id="event_history_icon"></i>Event History</div>
-            <div class=button><i id="dark_mode_icon"></i>Dark Mode</div>
-            <div class=button><a id="logout">Log Out</a></div>
+            <div id="exposedEvents">
+                <!-- Events reported to database -->
+                <div class="mb-3">
+                    <b>Reported Events</b>
+                </div>
+                <div class="mb-3" id="exposeureContent">
+                </div>
+            </div>
         </div>
     </div>
 

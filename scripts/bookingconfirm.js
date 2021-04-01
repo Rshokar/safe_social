@@ -24,15 +24,13 @@ function writeEvent() {
             Date: document.getElementById("date").innerHTML,
             Time: document.getElementById("time").innerHTML,
             UID: id
-        }).then(function () {
-            window.location.replace("events.html");
-        });
+        }).then(writeGuests());
     });
 
     
 }
 
-//create guest collection
+//create guest collection within the created event
 function writeGuests() {
 
     //query database to get doc id where event is the event name
@@ -46,9 +44,9 @@ function writeGuests() {
     //add data to the guests collection
     guests.add({
         Test: "Testing"
+    }).then(function () {
+        window.location.replace("events.html");
     });
-    });
+    })
 }); 
 }
-
-//writeGuests();
