@@ -1,51 +1,54 @@
 //this function prints the events that the user is part of to the html page
-function readEvent() {
-  var entryCounter;
-  
+$(document).ready(function () {
   firebase.auth().onAuthStateChanged(function (user) {
-    //console.log(user.uid);
+    console.log(user.uid)
     var id = user.uid;
     let tableData = [];
     entryCounter = 0;
 
-    db.collection("Event").where("UID", "==", id)
+    db.collection("Event").where("host.id", "==", id)
       .get()
       .then(function (snap) {
         snap.forEach(function (doc) {
-          $(document).ready(function () {
+          console.log(doc.data());
 
-            var event = doc.data().Event;
-            var date = doc.data().Date;
+          //console.log(location);
+          //console.log(date);
+          //console.log(snap.size);
+          //if a entry is found in database, increment counter and print data to page
+          if (snap.size > 0) {
+            entryCounter++;
 
-            //console.log(location);
-            //console.log(date);
-            //console.log(snap.size);
-            //if a entry is found in database, increment counter and print data to page
-            if (snap.size > 0) {
-              entryCounter++;
-
-              //adds the html containing the event data to the tableData array
-              tableData.push($("<a href='#' class='list-group-item list-group-item-action'>" +
-                "<div class='d-flex w-100 justify-content-between'>" +
-                "<h5 class='mb-1'>" + event + "</h5>" +
-                "<small class='text-muted'>A few seconds ago</small>" +
-                "</div>" +
-                "<small class='text-muted'>" + date + "</small>" +
-                "</a>"));
-
-              //append tableData to html page
-              $("#content").append(tableData);
-            }
-          });
+            //adds the html containing the event data to the tableData array
+            tableData.push($(
+              `
+              <div id='${doc.id}' href='#' class='list-group-item list-group-item-action'>
+                <div class='d-flex w-100 justify-content-between'>
+                  <h5 class='mb-1'>${doc.data().event}</h5>
+                  <small class='text-muted'></small>
+                </div>
+                <small class='text-muted date'>${doc.data().date}</small></br>
+                <small class='text-muted location'>${doc.data().location}</small>
+              </div>"));
+              `))
+            //append tableData to html page
+            $("#content").append(tableData);
+            eventDetailsListner(doc.id);
+          }
         })
       })
-  });
+  })
+})
 
-  //check if there are any entries
-  checkNumberOfEntries(entryCounter);
+
+function eventDetailsListner(id) {
+  document.getElementById(id)
+    .addEventListener('click', function () {
+      myUrl = "http://127.0.0.1:5500/event_details.html?id=" + id;
+      window.location.replace(myUrl);
+    })
 }
 
-readEvent();
 
 //this function checks if there are any events that the user is part of in the database
 function checkNumberOfEntries(entries) {

@@ -2,14 +2,13 @@
 
 var myObj = JSON.parse(localStorage.getItem('formdata'));
 
-
+//When page is loaded locat storage contents are displayed to HTML. 
 $(document).ready(function () {
     document.getElementById("event").innerHTML = myObj.event;
     document.getElementById("location").innerHTML = myObj.location;
     document.getElementById("date").innerHTML = myObj.date;
     document.getElementById("time").innerHTML = myObj.time;
     renderGuest(myObj.guest);
-
 })
 
 
@@ -25,12 +24,18 @@ function renderGuest(guestObj) {
 
 //write to database
 $('#submit').click(function () {
-    myObj.host = auth.currentUser.uid;
+    host = {
+        name: auth.currentUser.displayName,
+        id: auth.currentUser.uid
+    }
+    myObj.host = host;
+
     console.log(myObj);
 
     db.collection("Event").add(myObj)
         .then(() => {
             console.log("Document successfully written! " + myObj);
+            window.location.replace(ROUTE + "events.html");
         })
         .catch((error) => {
             console.error("Error writing document: ", error);
