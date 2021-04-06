@@ -10,5 +10,7 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+//Set up constants used in most scripts.
 const auth = firebase.auth();
 const db = firebase.firestore();

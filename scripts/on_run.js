@@ -18,3 +18,5 @@ auth.onAuthStateChanged(function (user) {
     }
 });
 
+//The route of our website. 
+const ROUTE = "http://127.0.0.1:5500/";

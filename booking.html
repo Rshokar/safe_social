@@ -17,6 +17,9 @@
   <!-- Optional styles and scripts of your own -->
   <link href="styles/main.css" rel="stylesheet">
 
+  <!-- Custom CSS for booking.html -->
+  <link href="styles/booking.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -53,8 +56,8 @@
     </div>
   </nav>
 
-   <!-- Mobile Navigation Bar -->
-   <footer id="mobile-nav-bar">
+  <!-- Mobile Navigation Bar -->
+  <footer id="mobile-nav-bar">
     <nav class="mobile-bottom-nav">
       <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
         <div class="mobile-bottom-nav__item-content">
@@ -95,6 +98,8 @@
   <!-------------------------------------->
 
   <div class="container" id="booking">
+
+    <!-- Form -->
     <h1>Event Booking</h1>
     <div class="form-group row">
       <label for="example-text-input" class="col-2 col-form-label">Event</label>
@@ -131,14 +136,37 @@
       Next
      
       </button> -->
-    <a href="bookingconfirm.html"><button class="btn btn-primary" type="button" onclick="setDataBooking()"
-        data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Next</button></a>
+    <button id='submit' class="btn btn-primary" type="button" data-bs-toggle="modal"
+      data-bs-target="#exampleModal">Next</button></a>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button id='add_freinds' type="button" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#exampleModal">
       Add Friends
     </button>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+
+
+    <!-- Layover -->
+    <div id='layover'>
+
+      <table id="guest_list">
+
+      </table>
+
+      <div id='freinds_list'>
+        <input id='freinds_search_bar' type="text" id="form1" class="form-control" placeholder="Search"
+          aria-label="Search" />
+
+        <!-- This is where freinds list will be rendered-->
+        <table></table>
+        <button id='back' type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">Back</button>
+      </div>
+
+
+    </div>
+
+    <!-- 
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
       class="modal-dialog modal-dialog-scrollable">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -475,27 +503,31 @@
             <br />
             <br />
           </div>
-          
-          <!----------------------------------------------->
-          <!-- JS: Boostrap, Firebase, API related    -->
-          <!----------------------------------------------->
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-          </script>
+        -->
 
-          <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-          <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-          <script src="scripts/firebase_api.js"></script>
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+      </script>
 
-          <!--------------------------------------------------------------------->
-          <!-- JS files: Your own JavaScript functions included here    -->
-          <!--------------------------------------------------------------------->
-          <script src="scripts/booking.js"></script>
-          <script src="scripts/friends.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="scripts/firebase_api.js"></script>
 
-          <!--Runs every time the file is opened -->
-          <script src="scripts/on_run.js"></script>
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+
+    <!--Runs every time the file is opened -->
+    <script src="scripts/on_run.js"></script>
+
+
+    <script src="scripts/booking.js"></script>
+    <script src="scripts/friends.js"></script>
+
 
 </body>
 

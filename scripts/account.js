@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 /* This function expands and contracts update account form */
 function expandAccount() {
-    user = firebase.auth().currentUser
+    user = auth.currentUser
     div = $("#my_account")
     if ($(div).hasClass("active")) {
 
@@ -27,6 +27,7 @@ function expandAccount() {
 
 
     } else {
+        console.log(user);
         $("#inputEmail").val(user.email)
         $("#inputName").val(user.displayName)
         $(div).addClass("active")
@@ -37,7 +38,7 @@ function expandAccount() {
 
 /* This function updates users email and name in the DB*/
 $(document).ready(function () {
-    user = firebase.auth().currentUser
+    user = auth.currentUser
 
     /* This function updates users email and name in the DB*/
     $("#submit_edit_user").click(function () {
@@ -60,25 +61,23 @@ $(document).ready(function () {
 
     })
 
-    renderFreinds();
-
 
 })
 
 //This meathod gets user freinds from DB and displays them to HTML
 function renderFreinds() {
-    var freindsDoc = db.collection('users');
+    var freindsDoc = db.collection('users').doc(auth.currentUser.uid).collection('freinds');
     freindsDoc.get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             console.log(doc.id, " => ", doc.data());
             let user = doc.data();
             html = "<tr><td><span class='freind_name'>" + user.name
-                + "</span></td><td><button id='" + doc.id + "' class='action_button'>Remove</button></td></tr>"
+                + "</span></td><td><button id='" + doc.id + "' class='action_button remove'>Remove</button></td></tr>"
             $('#freinds_list').append(html);
+            removeFreindListner(doc.id)
         });
     });
 }
-
 
 /* This function updates HTML when user inpnut on search bar*/
 $('#freinds_search_bar').on('input', function () {
@@ -105,7 +104,7 @@ $('#freinds_search_bar').on('input', function () {
             $('#user_list').empty();
             querySnapshot.forEach((doc) => {
                 inUser = doc.data();
-                let inHtml = "<tr> <td><span class='user_name'>" + inUser.name + "</span></td><td><button id='" + doc.id + "' class='action_button'>Add</button></td></tr>"
+                let inHtml = "<tr> <td><span class='user_name'>" + inUser.name + "</span></td><td><button id='" + doc.id + "' class='action_button add'>Add</button></td></tr>"
 
                 console.log(doc.id, " => ", doc.data());
                 $('#user_list').append(inHtml);
@@ -136,6 +135,8 @@ function cleanPages() {
 
 $("#freinds_tab").click(function () {
     cleanPages();
+    renderFreinds();
+
 
     $('#freinds').css({
         'display': 'block'
@@ -189,10 +190,26 @@ function addFreindListner(id, name) {
                 .doc(id)
                 .set(obj)
                 .then(function () {
-                    console.log("added freind DB");
-                    $(id).css({
-                        'background-color': 'black'
-                    })
+                    console.log("Added freind DB");
+                    $("#" + id).addClass('remove').removeClass('add');
+                })
+
+
+        })
+}
+//This listner is responsible for removing freinds from currrent users 
+//freinds list
+function removeFreindListner(id) {
+    document.getElementById(id)
+        .addEventListener('click', function () {
+            db.collection('users')
+                .doc(auth.currentUser.uid)
+                .collection('freinds')
+                .doc(id)
+                .delete()
+                .then(function () {
+                    console.log("Deleted freind DB");
+                    $("#" + id).addClass('add').removeClass('remove');
                 })
 
 

@@ -1,52 +1,65 @@
 
-//print data from localstorage
-function getDataBooking2() {
-    var myObj = JSON.parse(localStorage.getItem('formdata'));
+
+var myObj = JSON.parse(localStorage.getItem('formdata'));
+
+//When page is loaded locat storage contents are displayed to HTML. 
+$(document).ready(function () {
     document.getElementById("event").innerHTML = myObj.event;
     document.getElementById("location").innerHTML = myObj.location;
     document.getElementById("date").innerHTML = myObj.date;
     document.getElementById("time").innerHTML = myObj.time;
+    renderGuest(myObj.guest);
+})
+
+
+//This meathod gets event guest from guestObj and displays them to HTML
+function renderGuest(guestObj) {
+    for (var guest in guestObj) {
+        html = "<tr><td><span class='freind_name'>" + guestObj[guest].name
+            + "</span></td></tr>"
+        $('#guest_list').append(html);
+    }
 }
-getDataBooking2();
+
 
 //write to database
-function writeEvent() {
-    var eventRef = db.collection("Event");
-    var id;
+$('#submit').click(function () {
+    host = {
+        name: auth.currentUser.displayName,
+        id: auth.currentUser.uid
+    }
+    myObj.host = host;
 
-    firebase.auth().onAuthStateChanged(function(user) {
-        id = user.uid;
-        console.log(id);
+    console.log(myObj);
 
-        eventRef.add({
-            Event: document.getElementById("event").innerHTML,
-            Location: document.getElementById("location").innerHTML,
-            Date: document.getElementById("date").innerHTML,
-            Time: document.getElementById("time").innerHTML,
-            UID: id
-        }).then(writeGuests());
-    });
+    db.collection("Event").add(myObj)
+        .then(() => {
+            console.log("Document successfully written! " + myObj);
+            window.location.replace(ROUTE + "events.html");
+        })
+        .catch((error) => {
+            console.error("Error writing document: ", error);
+        });
+})
 
-    
-}
 
 //create guest collection within the created event
 function writeGuests() {
 
     //query database to get doc id where event is the event name
     db.collection("Event").where("Event", "==", document.getElementById("event").innerHTML)
-    .get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        //console.log(doc.id, " => ", doc.data());
-        console.log(doc.id);
-        var guests = db.collection("Event").doc(doc.id).collection("Guests");
+        .get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                //console.log(doc.id, " => ", doc.data());
+                console.log(doc.id);
+                var guests = db.collection("Event").doc(doc.id).collection("Guests");
 
-    //add data to the guests collection
-    guests.add({
-        Test: "Testing"
-    }).then(function () {
-        window.location.replace("events.html");
-    });
-    })
-}); 
+                //add data to the guests collection
+                guests.add({
+                    Test: "Testing"
+                }).then(function () {
+                    window.location.replace("events.html");
+                });
+            })
+        });
 }
