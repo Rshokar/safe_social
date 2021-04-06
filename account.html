@@ -113,9 +113,9 @@
                 <form>
                     <div class="mb-3">
                         <label for="exposureReport" class="form-label">Event Name</label>
-                        <input type="text" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                        <input type="text" class="form-control" id="exposure" placeholder="Event">
                     </div>
-                    <a id="submit_edit_user" class="btn btn-primary">Submit</a>
+                    <a id="submit_edit_user" class="btn btn-primary" onclick="writeExposure()">Submit</a>
                 </form>
             </div>
             <div id="exposedEvents">
@@ -123,7 +123,7 @@
                 <div class="mb-3">
                     <b>Reported Events</b>
                 </div>
-                <div class="mb-3" id="exposeureContent">
+                <div class="mb-3" id="exposureContent">
                 </div>
             </div>
         </div>
@@ -199,6 +199,9 @@
 
     <!-- Account page java script file -->
     <script src="scripts/account.js"></script>
+
+    <!-- exposure script file -->
+    <script src="scripts/exposure.js"></script>
 
 </body>
 
