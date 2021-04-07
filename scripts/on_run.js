@@ -1,4 +1,4 @@
-let restricted = ["account.html", "exposures.html", "bookingconfirm.html", "booking.html", "events.html"]
+let restricted = ["account.html", "exposures.html", "bookingconfirm.html", "booking.html", "events.html", "event_history.html"]
 
 auth.onAuthStateChanged(function (user) {
     if (user) {

@@ -215,3 +215,8 @@ function removeFreindListner(id) {
 
         })
 }
+
+//This function is to redirect userers to event_histroy.html
+$("#event_history").click(function () {
+    window.location.replace("http://127.0.0.1:5500/event_history.html")
+})
