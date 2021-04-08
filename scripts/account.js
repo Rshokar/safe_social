@@ -45,7 +45,6 @@ $(document).ready(function () {
         let email = $("#inputEmail").val()
         let name = $("#inputName").val()
 
-
         user.updateProfile({
             displayName: name
         }).then(function () {
@@ -123,6 +122,9 @@ $('#freinds_search_bar').on('input', function () {
  * They do this by changing the CSS display setting and the color of the tabs.   
  */
 function cleanPages() {
+
+    $('#freinds_list').empty();
+
     $('.tab').css({
         'background-color': '#EE964b',
         'color': 'white'
@@ -215,3 +217,8 @@ function removeFreindListner(id) {
 
         })
 }
+
+//This function is to redirect userers to event_histroy.html
+$("#event_history").click(function () {
+    window.location.replace("http://127.0.0.1:5500/event_history.html")
+})
