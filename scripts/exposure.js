@@ -5,7 +5,7 @@ function writeExposureHost() {
 
     //time string
     var reportedDate = document.getElementById("exposure").value;
-    var timeFrame = firebase.firestore.Timestamp.now().toDate();
+    //var timeFrame = firebase.firestore.Timestamp.now().toDate();
     var convert = new Date(reportedDate);
     var restriction = new Date(convert - 12096e5);
     var yyyy = restriction.getFullYear();
