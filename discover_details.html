@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Discover</title>
+    <title>Event Details</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -11,13 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="styles/main.css" />
 
-    <!-- Custom CSS file for discover.html -->
-    <link rel="stylesheet" href="styles/discover.css" />
+    <!-- Optional styles and scripts of your own -->
+    <link rel="stylesheet" href="styles/event_details.css" />
+
 </head>
 
 <body>
@@ -41,7 +42,7 @@
                         <a class="nav-link active" aria-current="page" href="account.html">Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="booking.html">New</a>
+                        <a class="nav-link active" aria-current="page" href="new.html">New</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="login.html">Sign Up</a>
@@ -57,9 +58,44 @@
     <!-------------------------------------->
     <!-- Put Content Here -->
     <!-------------------------------------->
-    <div id="content_section">
-        <div id="page_title">
-            <h1>Discover</h1>
+    <div id="contnet_section">
+
+        <div id="image_container">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/hockey_test_one.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/hockey_test_two.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/hockey_test_three.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <h1 id="event_title"></h1>
+
+        <div>
+            <div id="event_detials" class="page">
+                <span><b>Event Details</b></span>
+                <span id="address"></span>
+            </div>
+
+            <div id="create_event">
+                <button type="button" class="btn btn-primary" id="eventButton">Create Event</button>
+            </div>
         </div>
     </div>
 
@@ -91,6 +127,7 @@
                 </div>
             </div>
 
+
             <div class="mobile-bottom-nav__item">
                 <div class="mobile-bottom-nav__item-content">
                     <a id="mobile_nav_links" href="booking.html">
@@ -101,18 +138,19 @@
             </div>
         </nav>
     </footer>
-
     <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, API related    -->
+    <!--   JS: Boostrap, Firebase, API related   -->
     <!----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+    <!-- Link to the api keys for your firebase project -->
     <script src="scripts/firebase_api.js"></script>
 
     <!--------------------------------------------------------------------->
@@ -122,32 +160,9 @@
     <!-- Runs every time the file is opened -->
     <script src="scripts/on_run.js"></script>
 
-    <script src="scripts/create_blocks.js"></script>
-    <!-- This is the function that allows images to scroll up and down in discover.html It 
-    has been disabled becasue it seems to be a distraction. -->
-    <!--
-    <script>
-        $(function () {
-            $(".box").click(function () {
-                console.log("Event Targt:" + this)
-                if ($(this).hasClass("active")) {
+    <!-- Customer JS for event_details.html -->
+    <script src="scripts/discover_details.js"></script>
 
-                    $(this).removeClass("active")
-
-                    let img = $(this).children("img")
-                    img.slideUp(1000)
-
-                } else {
-                    $(this).addClass("active")
-
-                    let img = $(this).children("img")
-                    img.slideDown(1000)
-                }
-
-            })
-        })
-    </script>
--->
 </body>
 
 </html>

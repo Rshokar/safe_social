@@ -2,19 +2,29 @@
 $(document).ready(function () {
 
   let eventLocation = [
-    ["Vancouver Creek Park", " 4600 Cambie St, Vancouver, BC V5Z 2Z1", 3, ["Hiking", "Tennis", "Out Door Gym"]],
-    ["Brandywine Falls Provincial Park", "Whistler, BC V0N 0A0", 2, ["Skating", "Fishing", "Snow Shoeing"]],
-    ["Burnaby Mountain Conservation Area", "800 Burnaby Mountain Pkwy, Burnaby, BC V5A 1G9", 5, ["Hiking", "Bird Watching", "Running"]],
-    ["Ruth Johnson Park", "14600 North Bluff Rd, White Rock, BC V4B 2V1", 4, ["Swimming", "Dog Park"]],
-    ["Penzer Action Park", "4748 198c St, Langley City, BC V3A 8G2", 5, ["Cat Park", "Lots of Mice", "NO DOGS"]],
+    ["Vancouver Creek Park", " 4600 Cambie St, Vancouver, BC V5Z 2Z1", 3, ["Hiking", "Tennis", "Out Door Gym"], "Xw4YyfzvrIkLFjE61G7m"
+  ],
+    ["Brandywine Falls Provincial Park", "Whistler, BC V0N 0A0", 2, ["Skating", "Fishing", "Snow Shoeing"], "ba4Rs6bIr8tDIfWDPfsV"
+  ],
+    ["Burnaby Mountain Conservation Area", "800 Burnaby Mountain Pkwy, Burnaby, BC V5A 1G9", 5, ["Hiking", "Bird Watching", "Running"], "7g9YEpk5SCUwqNdIbbzY"
+  ],
+    ["Ruth Johnson Park", "14600 North Bluff Rd, White Rock, BC V4B 2V1", 4, ["Swimming", "Dog Park"], "8cXzaOdTV7hWGdP5jm5o"],
+    ["Penzer Action Park", "4748 198c St, Langley City, BC V3A 8G2", 5, ["Cat Park", "Lots of Mice", "NO DOGS"], "mmslXIeU0Fh8fnEqlsgG"
+  ],
   ]
 
+  
+
   for (i = 0; i < eventLocation.length; i++) {
-    $("#content_section").append(createDiscoverEvent(eventLocation[i]))
+    $("#content_section").append(createDiscoverEvent(eventLocation[i]));
+    console.log(eventLocation[i][4]);
+    discoverDetailsListner(eventLocation[i][4]);
   }
 
+  
+  
   function createDiscoverEvent(inData) {
-    let container = createBox()
+    let container = createBox(inData[4])
     container.append(createImages())
     container.append(createTitle(inData[0]))
     container.append(createAddress(inData[1]))
@@ -23,8 +33,17 @@ $(document).ready(function () {
     return container;
   }
 
-  function createBox() {
-    let box = $("<div></div>");
+  function discoverDetailsListner(id) {
+    console.log(document.getElementById(id));
+    document.getElementById(id)
+        .addEventListener('click', function () {
+            myUrl = "http://127.0.0.1:5500/discover_details.html?id=" + id;
+            window.location.replace(myUrl);
+        })
+}
+
+  function createBox(id) {
+    let box = $("<div id='"+ id +"'></div>");
     box.addClass("box");
     return box
   }

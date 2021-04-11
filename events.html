@@ -16,6 +16,12 @@
   <!-- Optional styles and scripts of your own -->
   <link href="styles/main.css" rel="stylesheet">
 
+  <!-- Custom css for event_history.css -->
+  <link rel="stylesheet" href="styles/event_history.css" />
+
+  <!-- Custom CSS file for discover.html -->
+  <link rel="stylesheet" href="styles/discover.css" />
+
 </head>
 
 <body>
@@ -60,9 +66,21 @@
   <!-------------------------------------->
   <!-- Put Content Here -->
   <!-------------------------------------->
-  <div id="contnet_section">
+  <div id="content_section">
     <h1>Events</h1>
-    <div id="content" onload="createDiscoverEvents()"></div>
+    <div id="tabs">
+      <span id="host_button" class="tab">Host</span>
+      <span id="guest_button" class="tab">Guest</span>
+    </div>
+  </div>
+  <div id="host_events">
+    <h3>Hosted Events</h3>
+
+  </div>
+
+  <div id="guest_events">
+    <h3>Guest</h3>
+  </div>
   </div>
 
   <!-- Mobile Navigation Bar -->
@@ -124,11 +142,11 @@
   <!-- Runs every time the file is opened -->
   <script src="scripts/on_run.js"></script>
 
+  <!-- Gets the script that creates the text boxes to display the data on -->
+  <script src="scripts/create_event_blocks.js"></script>
+
   <!-- Gets the events script -->
   <script src="scripts/events.js"></script>
-
-  <!-- Gets the script that creates the text boxes to display the data on -->
-  <script src="scripts/create_blocks.js"></script>
 </body>
 
 </html>

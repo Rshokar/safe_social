@@ -7,6 +7,16 @@ $(document).ready(function () {
     getHostedEvents(user, date);
     getGuestEvents(user, date);
 
+    $("#host_button").click(function() {
+      $("#guest_events").css("display", "none");
+      $("#host_events").css("display", "block");
+    });
+    
+    $("#guest_button").click(function() {
+      $("#host_events").css("display", "none");
+      $("#guest_events").css("display", "block");
+    });
+
   })
 })
 
