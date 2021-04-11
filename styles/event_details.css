@@ -1,3 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 #event_detials span {
     display: block;
+}
+
+#group_chat {
+    display: none;
+    background-color: #EE964b;
+    width: 98%;
+    margin: auto;
+    margin-bottom: 50px;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+#chat_container {
+    background-color: white;
+    width: 98%;
+    margin: auto;
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:60px;
+    right:0;
+    overflow: scroll;
+}
+
+#message_input {
+    width: 100%;
+    position: fixed;
+    bottom: 60px;
+}
+
+#message_input  input{
+    display: inline;
+    width: 70%;
+}
+
+.message_bubble {
+    background-color: #EE964b;
+    font-size: 10pt;
+    width: 100%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color: black;
+    padding: .5em .5em .5em .5em;
+    border-radius: 2%;
+    text-align: left;
+}
+
+
+.current_user {
+    text-align: right;
+    grid-column: 2 / span 2;
+    float: right;
+    width: 70%;
+}
+
+.user {
+    text-align: left;
+    grid-column: 2 / span 2;
+    float: left;
+    width: 70%;
+}
+
+.user .message_bubble {
+    background-color: grey;
 }
