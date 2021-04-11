@@ -1,5 +1,12 @@
 var guestObj = {}
 
+var sendObj = JSON.parse(localStorage.getItem('formdata'));
+
+$(document).ready(function() {
+    document.getElementById("example-text-input").value = sendObj.event;
+    document.getElementById("example-password-input").value = sendObj.address;
+});
+
 //This function completes the Event data collection process. It gets data from 
 //forms on booking.html and guestObj.  
 $("#submit").click(function () {
