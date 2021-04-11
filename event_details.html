@@ -59,7 +59,6 @@
   <!-- Put Content Here -->
   <!-------------------------------------->
   <div id="contnet_section">
-
     <div id="image_container">
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
@@ -104,74 +103,89 @@
         <table id="guest_list">
 
         </table>
+      </div>
+    </div>
+    <button type="button" id="show_chat">Chat</button>
+  </div>
 
+
+  <div id="group_chat">
+    <div id="chat_container">
+      <div id="message_input">
+        <input type="text" class="form-control" placeholder="message">
+        <button type="button" id="message_submit">Send</button>
+        <button type="button" id="hide_chat">Hide</button>
+      </div>
+
+      <!-- This is where messages are rendereed -->
+      <div id="messages">
 
       </div>
     </div>
-
-    <!-- Mobile Navigation Bar -->
-    <footer id="mobile-nav-bar">
-      <nav class="mobile-bottom-nav">
-        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
-          <div class="mobile-bottom-nav__item-content">
-            <a id="mobile_nav_links" href="events.html">
-              <img src="images/events.png" class="mobile-nav-bar-icon">
-              <i class="material-icons">Events</i>
-            </a>
-          </div>
+  </div>
+  <!-- Mobile Navigation Bar -->
+  <footer id="mobile-nav-bar">
+    <nav class="mobile-bottom-nav">
+      <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+        <div class="mobile-bottom-nav__item-content">
+          <a id="mobile_nav_links" href="events.html">
+            <img src="images/events.png" class="mobile-nav-bar-icon">
+            <i class="material-icons">Events</i>
+          </a>
         </div>
-        <div class="mobile-bottom-nav__item">
-          <div class="mobile-bottom-nav__item-content">
-            <a id="mobile_nav_links" href="discover.html">
-              <img src="images/discover.png" class="mobile-nav-bar-icon">
-              <i class="material-icons">Discover</i>
-            </a>
-          </div>
+      </div>
+      <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+          <a id="mobile_nav_links" href="discover.html">
+            <img src="images/discover.png" class="mobile-nav-bar-icon">
+            <i class="material-icons">Discover</i>
+          </a>
         </div>
-        <div class="mobile-bottom-nav__item">
-          <div class="mobile-bottom-nav__item-content">
-            <a id="mobile_nav_links" href="account.html">
-              <img src="images/account.png" class="mobile-nav-bar-icon">
-              <i class="material-icons">Account</i>
-            </a>
-          </div>
+      </div>
+      <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+          <a id="mobile_nav_links" href="account.html">
+            <img src="images/account.png" class="mobile-nav-bar-icon">
+            <i class="material-icons">Account</i>
+          </a>
         </div>
+      </div>
 
 
-        <div class="mobile-bottom-nav__item">
-          <div class="mobile-bottom-nav__item-content">
-            <a id="mobile_nav_links" href="booking.html">
-              <img src="images/plus.png" class="mobile-nav-bar-icon">
-              <i class="material-icons">New</i>
-            </a>
-          </div>
+      <div class="mobile-bottom-nav__item">
+        <div class="mobile-bottom-nav__item-content">
+          <a id="mobile_nav_links" href="booking.html">
+            <img src="images/plus.png" class="mobile-nav-bar-icon">
+            <i class="material-icons">New</i>
+          </a>
         </div>
-      </nav>
-    </footer>
-    <!----------------------------------------------->
-    <!--   JS: Boostrap, Firebase, API related   -->
-    <!----------------------------------------------->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-      </script>
+      </div>
+    </nav>
+  </footer>
+  <!----------------------------------------------->
+  <!--   JS: Boostrap, Firebase, API related   -->
+  <!----------------------------------------------->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
 
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
 
-    <!-- Link to the api keys for your firebase project -->
-    <script src="scripts/firebase_api.js"></script>
+  <!-- Link to the api keys for your firebase project -->
+  <script src="scripts/firebase_api.js"></script>
 
-    <!--------------------------------------------------------------------->
-    <!-- JS files: Your own JavaScript functions included here    -->
-    <!--------------------------------------------------------------------->
+  <!--------------------------------------------------------------------->
+  <!-- JS files: Your own JavaScript functions included here    -->
+  <!--------------------------------------------------------------------->
 
-    <!-- Runs every time the file is opened -->
-    <script src="scripts/on_run.js"></script>
+  <!-- Runs every time the file is opened -->
+  <script src="scripts/on_run.js"></script>
 
-    <!-- Customer JS for event_details.html -->
-    <script src="scripts/event_details.js"></script>
+  <!-- Customer JS for event_details.html -->
+  <script src="scripts/event_details.js"></script>
 
 </body>
 

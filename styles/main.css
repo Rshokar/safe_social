@@ -154,6 +154,7 @@ p {
 
     #content_section {
         width: 100%;
+        margin-bottom: 50px;
     }
 
     #page_title h1 {
