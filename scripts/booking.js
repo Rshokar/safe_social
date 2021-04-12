@@ -3,8 +3,12 @@ var guestObj = {}
 var sendObj = JSON.parse(localStorage.getItem('formdata'));
 
 $(document).ready(function() {
+  console.log(sendObj.address);
+  if (sendObj.address != undefined) {
     document.getElementById("example-text-input").value = sendObj.event;
     document.getElementById("example-password-input").value = sendObj.address;
+  }
+    
 });
 
 //This function completes the Event data collection process. It gets data from 
