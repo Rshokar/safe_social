@@ -70,7 +70,7 @@ $(document).ready(function () {
           //append tableData2 to html
           $("#guest_events").append(tableData2);
           eventDetailsListner(doc.id); */
-        }) 
+        })
       });
   });
 
