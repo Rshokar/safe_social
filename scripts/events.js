@@ -4,8 +4,6 @@ $(document).ready(function () {
     console.log(user.uid)
     var id = user.uid;
     var username = user.displayName;
-    let tableData = [];
-    let tableData2 = [];
     entryCounter = 0;
 
     db.collection("Event").where("host.id", "==", id)
