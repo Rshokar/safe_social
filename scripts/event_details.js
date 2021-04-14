@@ -40,21 +40,37 @@ $(document).ready(function () {
     })
 
   /** Renders all messages to group chat. */
-  let chatQuery = db.collection("Event")
+  db.collection("Event")
     .doc(eventID)
-    .collection('chat')
+    .collection("chat")
     .orderBy('date')
-    .get()
-    .then((snap) => {
-      snap.forEach((doc) => {
-        message = doc.data();
-        html = buildMessageHtml(message.UID, message.message, message.displayName, message.date, 'Sent', doc.id)
-        $('#messages').append(html);
+    .onSnapshot((snap) => {
+      snap.docChanges().forEach(function (change) {
+        console.log(change.doc.data());
+        message = change.doc.data();
+        console.log()
+        html = buildMessageHtml(
+          message.UID,
+          message.message,
+          message.displayName,
+          message.date,
+          "",
+          ""
+        )
+        $("#messages").append(html);
       })
-    })
+    });
 })
 
-/** Slides group chat down in to viewport*/
+/**
+console.log("This: " + doc);
+message = doc.data();
+html = buildMessageHtml(message.UID, message.message, message.displayName, message.date, 'Sent', doc.id)
+$('#messages').append(html);
+*/
+
+
+/** Slides group chat down into viewport*/
 $("#show_chat").click(function () {
   $('#group_chat').slideDown(1000);
 })
@@ -70,17 +86,8 @@ $("#message_submit").click(function () {
   let date = new Date().toLocaleString();
   let message = $("#message_input input").val();
   messageObj = buildMessageObj(message, date);
-  message = buildMessageHtml(
-    auth.currentUser.uid,
-    message,
-    auth.currentUser.displayName,
-    date,
-    "Submitted",
-    "none"
-  )
-  console.log(message);
-  $("#messages").append(message);
   updateChatCollection(messageObj, date)
+  $("#message_input input").val("");
 })
 
 
@@ -137,4 +144,3 @@ function updateChatCollection(obj) {
       console.error("Error adding document: ", error);
     });
 }
-
