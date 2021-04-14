@@ -133,8 +133,24 @@ function writeExposureGuest() {
                         });
                     }
                 });
-            });
+            }).then(setTimeout(function () {
+                window.location.href = 'account.html?reload=true';
+            }, 1000));
     })
 }
 
 //writeExposureGuest();
+
+function setExposureConfirmation() {
+    let urlBar = window.location;
+    let url = new URL(urlBar);
+    let confirmationCheck = url.searchParams.get("reload");
+    //console.log(confirmationCheck);
+
+    if (confirmationCheck) {
+        let msg = "<h2>Exposure Submission Successful</h2>";
+        $("#confirm").append(msg);
+    }
+}
+
+setExposureConfirmation();

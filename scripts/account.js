@@ -70,6 +70,7 @@ function renderFreinds() {
         querySnapshot.forEach((doc) => {
             console.log(doc.id, " => ", doc.data());
             let user = doc.data();
+            console.log(doc.id);
             html = "<tr><td><span class='freind_name'>" + user.name
                 + "</span></td><td><button id='" + doc.id + "' class='action_button remove'>Remove</button></td></tr>"
             $('#freinds_list').append(html);
@@ -103,6 +104,7 @@ $('#freinds_search_bar').on('input', function () {
             $('#user_list').empty();
             querySnapshot.forEach((doc) => {
                 inUser = doc.data();
+                console.log(inUser);
                 let inHtml = "<tr> <td><span class='user_name'>" + inUser.name + "</span></td><td><button id='" + doc.id + "' class='action_button add'>Add</button></td></tr>"
 
                 console.log(doc.id, " => ", doc.data());
@@ -193,7 +195,7 @@ function addFreindListner(id, name) {
                 .set(obj)
                 .then(function () {
                     console.log("Added freind DB");
-                    $("#" + id).addClass('remove').removeClass('add');
+                    $("#" + id).parent().parent().remove();
                 })
 
 
@@ -211,7 +213,7 @@ function removeFreindListner(id) {
                 .delete()
                 .then(function () {
                     console.log("Deleted freind DB");
-                    $("#" + id).addClass('add').removeClass('remove');
+                    $("#" + id).parent().parent().remove();
                 })
 
 
