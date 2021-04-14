@@ -49,14 +49,24 @@ function writeExposureHost() {
                     //call the exposure collection to write to it
                     var exposureRef = db.collection("Exposure");
 
-                    exposureRef.add({
-                        reportedEvent: event,
-                        eventDate: eventDate,
-                        location: location,
-                        guest: guest,
-                        hostId: hostId,
-                        reportedDate: reportedDate
-                    });
+                    if (guest != undefined) {
+                        exposureRef.add({
+                            reportedEvent: event,
+                            eventDate: eventDate,
+                            location: location,
+                            guest: guest,
+                            hostId: hostId,
+                            reportedDate: reportedDate
+                        });
+                    } else {
+                        exposureRef.add({
+                            reportedEvent: event,
+                            eventDate: eventDate,
+                            location: location,
+                            hostId: hostId,
+                            reportedDate: reportedDate
+                        });
+                    }    
                 });
             }).then(function () {
                 writeExposureGuest();
@@ -123,14 +133,24 @@ function writeExposureGuest() {
                         //call the exposure collection to write to it
                         var exposureRef = db.collection("Exposure");
 
-                        exposureRef.add({
-                            reportedEvent: event,
-                            eventDate: eventDate,
-                            location: location,
-                            guest: guest,
-                            hostId: hostId,
-                            reportedDate: reportedDate
-                        });
+                        if (guest != undefined) {
+                            exposureRef.add({
+                                reportedEvent: event,
+                                eventDate: eventDate,
+                                location: location,
+                                guest: guest,
+                                hostId: hostId,
+                                reportedDate: reportedDate
+                            });
+                        } else {
+                            exposureRef.add({
+                                reportedEvent: event,
+                                eventDate: eventDate,
+                                location: location,
+                                hostId: hostId,
+                                reportedDate: reportedDate
+                            });
+                        }    
                     }
                 });
             }).then(setTimeout(function () {
