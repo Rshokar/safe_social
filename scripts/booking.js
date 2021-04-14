@@ -2,13 +2,13 @@ var guestObj = {}
 
 var sendObj = JSON.parse(localStorage.getItem('formdata'));
 
-$(document).ready(function() {
+$(document).ready(function () {
   console.log(sendObj.address);
   if (sendObj.address != undefined) {
     document.getElementById("example-text-input").value = sendObj.event;
     document.getElementById("example-password-input").value = sendObj.address;
   }
-    
+
 });
 
 //This function completes the Event data collection process. It gets data from 
@@ -87,7 +87,7 @@ function inviteFreindListner(id, name) {
   document.getElementById(id)
     .addEventListener('click', function () {
       guestObj[id] = {
-        name: name
+        name
       }
       $("#" + id).parent().parent().remove();
       console.log(guestObj);

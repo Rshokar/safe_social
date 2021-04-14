@@ -100,9 +100,23 @@
       </div>
     </div>
     <button type="button" id="show_chat">Chat</button>
+    <button type="button" id="invite_freinds">Invite</button>
   </div>
 
+  <!-- Guest list -->
+  <div id='layover'>
+    <div id='freinds_list'>
+      <input id='freinds_search_bar' type="text" id="form1" class="form-control" placeholder="Search"
+        aria-label="Search" />
 
+      <!-- This is where freinds list will be rendered-->
+      <table></table>
+      <button id='back' type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Back</button>
+    </div>
+  </div>
+
+  <!-- Group Chat-->
   <div id="group_chat">
     <div id="chat_container">
       <div id="message_input">
@@ -117,6 +131,8 @@
       </div>
     </div>
   </div>
+
+
   <!-- Mobile Navigation Bar -->
   <footer id="mobile-nav-bar">
     <nav class="mobile-bottom-nav">
