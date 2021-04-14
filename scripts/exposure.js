@@ -135,7 +135,7 @@ function writeExposureGuest() {
                 });
             }).then(setTimeout(function () {
                 window.location.href = 'account.html?reload=true';
-            }, 3000));
+            }, 1000));
     })
 }
 
