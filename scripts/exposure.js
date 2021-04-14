@@ -83,7 +83,7 @@ function writeExposureGuest() {
     var mm = restriction.getMonth() + 1;
     var dd = restriction.getDate();
     var dateString = yyyy + "-" + mm + "-" + dd;
-    
+
     //console.log(reportedDate);
     //event variables
     var event;
@@ -135,7 +135,7 @@ function writeExposureGuest() {
                 });
             }).then(setTimeout(function () {
                 window.location.href = 'account.html?reload=true';
-            }, 3000));
+            }, 1000));
     })
 }
 
