@@ -16,9 +16,10 @@ $(document).ready(function () {
     .get()
     .then((doc) => {
       if (doc) {
+        host = isHost(doc.data().host.id)
         updatePageDetails(doc)
-        renderGuest(isHost(doc.data().host.id));
-        if (!isHost(doc.data().host.id)) {
+        renderGuest(host);
+        if (!host) {
           $(".remove").remove()
         };
       } else {
@@ -68,8 +69,10 @@ function updatePageDetails(doc) {
  */
 function isHost(hostID) {
   if (hostID == auth.currentUser.uid) {
+    console.log("Host User");
     return true;
   } else {
+    console.log("Guest User");
     return false;
   }
 }
@@ -103,13 +106,23 @@ function renderGuest(isHost) {
  * @param guests is a list of guest. 
  */
 function buildGuestHtml(id, name, ishost) {
-  html =
-    `
+  if (ishost) {
+    html =
+      `
             <tr>
                 <td><span class='guest_name'>${name}</span></td>
                 <td><button id=${id} class='remove'>Remove</button></td>
             </tr>
       `
+  } else {
+    html =
+      `
+        <tr>
+          <td><span class='guest_name'>${name}</span></td>
+        </tr>
+      `
+  }
+
   $('#guest_list').append(html);
   if (ishost) {
     uninviteFreindListner(id);
