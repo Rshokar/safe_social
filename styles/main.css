@@ -112,7 +112,7 @@ p {
 
 
 #nav_container a {
-    color: white;
+    color: black;
 }
 
 #desktop-nav-bar{
@@ -182,7 +182,11 @@ p {
         */
     }
     .mobile-bottom-nav i {
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+
+    .mobile-bottom-nav a {
+        text-decoration: none;
     }
 
     .mobile_nav_links {

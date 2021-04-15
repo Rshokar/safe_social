@@ -16,9 +16,10 @@ $(document).ready(function () {
     .get()
     .then((doc) => {
       if (doc) {
+        host = isHost(doc.data().host.id)
         updatePageDetails(doc)
-        renderGuest(isHost(doc.data().host.id));
-        if (!isHost(doc.data().host.id)) {
+        renderGuest(host);
+        if (!host) {
           $(".remove").remove()
         };
       } else {
@@ -64,18 +65,22 @@ function updatePageDetails(doc) {
 
 
 /**
- * Verify that current user is host of event. 
+ * Verify that current user is host of event.
+ * @author Ravinder Shokar 
  */
 function isHost(hostID) {
   if (hostID == auth.currentUser.uid) {
+    console.log("Host User");
     return true;
   } else {
+    console.log("Guest User");
     return false;
   }
 }
 
 /**
  * This class queries the DB for guest attending event. 
+ * @author Ravinder Shokar
  * @param {*} isHost true or false value if current user 
  * is host of event. 
  */
@@ -100,16 +105,26 @@ function renderGuest(isHost) {
 
 /**
  * Builds the guest list in the HTML document.
+ * @author Ravinder Shokar
  * @param guests is a list of guest. 
  */
 function buildGuestHtml(id, name, ishost) {
-  html =
-    `
+  if (ishost) {
+    html =
+      `
             <tr>
                 <td><span class='guest_name'>${name}</span></td>
                 <td><button id=${id} class='remove'>Remove</button></td>
             </tr>
       `
+  } else {
+    html =
+      `
+        <tr>
+          <td><span class='guest_name'>${name}</span></td>
+        </tr>
+      `
+  }
   $('#guest_list').append(html);
   if (ishost) {
     uninviteFreindListner(id);
@@ -118,6 +133,7 @@ function buildGuestHtml(id, name, ishost) {
 
 /**
  * Builds the freinds list in #freinds_list.
+ * @author Ravinder Shokar
  * @param id is the id of the guest user.
  * @param name is the name of the guest user. 
  */
@@ -139,6 +155,7 @@ function buildFreindHtml(id, name) {
 /**
  * Add an event listner to buttons. When clicked will remove from 
  * html and db
+ * @author Ravinder Shokar
  * @param id the id of the guest who is removed. 
  */
 function uninviteFreindListner(id) {
@@ -159,6 +176,7 @@ function uninviteFreindListner(id) {
 /**
  * Add an event listner to freinds list buttons. When clicked will remove from 
  * html, and then added to event guest list. 
+ * @author Ravinder Shokar
  * @param id the id of the guest who has been invited removed.
  * @param name the name of the guest being invited 
  */
@@ -182,6 +200,7 @@ function inviteFreindListner(id, inName) {
 
 /**
  * This click function opens the add freind layover on event_details.html.
+ * @author Ravinder Shokar
  */
 $("#invite_freinds").click(function () {
   console.log("Invite freinds has been clicked");
@@ -192,6 +211,7 @@ $("#invite_freinds").click(function () {
 
 /**
  * This click function closes the add freind layover on event_details.html.
+ * @author Ravinder Shokar
  */
 $("#back").click(function () {
   $("#freinds_list table").empty();
@@ -200,6 +220,7 @@ $("#back").click(function () {
 
 /**
  * Queries freinds from db and renders them in #freinds_list
+ * @author Ravinder Shokar
  */
 function renderFreinds() {
   db.collection("users")
@@ -217,17 +238,26 @@ function renderFreinds() {
     })
 }
 
-/** Slides group chat down into viewport*/
+/** 
+ * Slides group chat down into viewport.
+ * @author Ravinder Shokar
+*/
 $("#show_chat").click(function () {
   $('#group_chat').slideDown(1000);
 })
 
-/** Slides group chat up out of viewport */
+/** 
+ * Slides group chat up out of viewport
+ * @author Ravinder Shokar
+ */
 $("#hide_chat").click(function () {
   $('#group_chat').slideUp(1000);
 })
 
-/* When clicked user submits a message to DB*/
+/** 
+ * When clicked user submits a message to DB
+ * @author Ravinder Shokar
+ */
 $("#message_submit").click(function () {
   let date = new Date().toLocaleString();
   let message = $("#message_input input").val();
@@ -236,7 +266,10 @@ $("#message_submit").click(function () {
   $("#message_input input").val("");
 })
 
-/** Builds message JSON objects. */
+/** 
+ * Builds message JSON objects.
+ * @author Ravinder Shokar
+ */
 function buildMessageObj(message, now) {
   obj = {
     UID: auth.currentUser.uid,
@@ -247,8 +280,10 @@ function buildMessageObj(message, now) {
   return obj;
 }
 
-/** Builds message HTML elements. If inputed uID == current UID then 
+/** 
+ * Builds message HTML elements. If inputed uID == current UID then 
  * class is set to current_user. Otherwise class is set to user. 
+ * @author Ravinder Shokar
  */
 function buildMessageHtml(uID, message, name, date, status, messageID) {
 
@@ -272,7 +307,10 @@ function buildMessageHtml(uID, message, name, date, status, messageID) {
 }
 
 
-/** Updates the chat collection. */
+/** 
+ * Updates the chat collection.
+ * @author Ravinder Shokar
+ */
 function updateChatCollection(obj) {
   db.collection("Event")
     .doc(eventID)
