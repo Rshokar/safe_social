@@ -1,3 +1,4 @@
+//This script is what allows the user to get notified
 const messaging = firebase.messaging();
 messaging.requestPermission()
 .then(function() {

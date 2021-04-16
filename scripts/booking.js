@@ -1,3 +1,7 @@
+
+/**
+ * @author Brendan Lin
+ */
 var guestObj = {}
 
 var sendObj = JSON.parse(localStorage.getItem('formdata'));
@@ -43,6 +47,9 @@ function renderGuest() {
   }
 }
 
+/**
+ * @author Ravinder Shokar
+ */
 //This meathod gets user freinds from DB and displays them to HTML
 function renderFreinds() {
   var freindsDoc = db.collection('users').doc(auth.currentUser.uid).collection('freinds');

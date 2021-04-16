@@ -17,9 +17,6 @@ $(document).ready(function () {
         snap.forEach(function (doc) {
           console.log(doc.data());
 
-          //console.log(location);
-          //console.log(date);
-          //console.log(snap.size);
           //if a entry is found in database, increment counter and print data to page
           if (snap.size > 0) {
             entryCounter++;
@@ -27,8 +24,7 @@ $(document).ready(function () {
             //adds the html containing the event data to the tableData array
             var tableData = [];
             tableData.push(doc.data().event, doc.data().date, doc.data().location, doc.id);
-            //console.log(tableData);
-            //console.log(createEvent(tableData));
+
             $("#host_events").append(createEvent(tableData));
             eventDetailsListner(doc.id);
           }
