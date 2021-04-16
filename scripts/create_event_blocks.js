@@ -1,3 +1,7 @@
+/**
+ * 
+ * @author Brendan Lin
+ */
 //creates an event to display on the html
 function createEvent(input) {
   let container = createBox(input[3]);
