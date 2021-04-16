@@ -93,4 +93,11 @@ booking.html
 notifications.js
 logout.js
 friends.js
+main.css
+firebase-messaging-sw.js
+booking.css
+account.html
+bookingconfirm.html
+addimage.js
+
 

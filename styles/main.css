@@ -9,8 +9,6 @@ body {
     overflow: auto;
 }
 
-
-
 table {
 
     text-align: left;
@@ -71,13 +69,6 @@ p {
     left: 30%;
     top: 30%;
 }
-
-/*
-#event {
-    position: relative;
-    left: 570%;
-}
-*/
 #mInfo {
     position: relative;
     top: 100%;
@@ -117,17 +108,11 @@ p {
 
 #desktop-nav-bar{
     background: #4fcdff;
-    /*background: linear-gradient(90deg, rgba(2,191,255,1) 0%, rgba(79,205,255,1) 50%, rgba(2,191,255,1) 100%);
-    */
 }
 
 .mobile-bottom-nav {
     visibility: hidden;
 }
-
-
-
-
 
 #page_title {
     margin: auto;
@@ -178,8 +163,6 @@ p {
         display: flex;
         height: 50px;
         background: #58C1EE;
-        /*background: linear-gradient(90deg, rgba(2,191,255,1) 0%, rgba(79,205,255,1) 50%, rgba(2,191,255,1) 100%);
-        */
     }
     .mobile-bottom-nav i {
         color: rgb(0, 0, 0);
