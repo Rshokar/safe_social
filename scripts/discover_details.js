@@ -1,3 +1,7 @@
+/**
+ * This displays the details on the discover_details page
+ * @author Brendan Lin
+ */
 $(document).ready(function () {
   var url_string = window.location;
   var url = new URL(url_string);
@@ -36,6 +40,7 @@ $(document).ready(function () {
       console.log("Error getting documents: " + error)
     })
 
+  //When user clicks on create event button, sends data to booking.html
   $("#eventButton").click(function () {
     var send = {
       "event": event,
