@@ -12,6 +12,10 @@ function createEvent(input) {
   return container;
 }
 
+/**
+ * 
+ * @author Brendan Lin
+ */
 //Builds the date
 function createDate(inputDate) {
   let date = $("<div>" + inputDate + "</div>");
@@ -19,6 +23,10 @@ function createDate(inputDate) {
   return date;
 }
 
+/**
+ * 
+ * @author Brendan Lin
+ */
 //Creates the testboxes
 function createBox(event) {
   let box = $("<div id='" + event + "'></div>");
@@ -26,6 +34,10 @@ function createBox(event) {
   return box
 }
 
+/**
+ * 
+ * @author Brendan Lin
+ */
 //Builds the title
 function createTitle(inName) {
   let title = $("<div>" + inName + "</div>");
@@ -33,6 +45,10 @@ function createTitle(inName) {
   return title
 }
 
+/**
+ * 
+ * @author Brendan Lin
+ */
 //Creates the address of event
 function createAddress(inAddress) {
   let address = $("<div>" + inAddress + "</div>");
@@ -40,6 +56,10 @@ function createAddress(inAddress) {
   return address
 }
 
+/**
+ * 
+ * @author Ravinder Shokar
+ */
 //Adds a slider
 function createSlider() {
   let slider = $("<div>=</div>");
@@ -54,6 +74,10 @@ function createSlider() {
   return slider
 }
 
+/**
+ * 
+ * @author Brendan Lin
+ */
 //Creates the images to display
 function createImages() {
   let image_container = $("<div><div>")

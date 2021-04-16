@@ -99,6 +99,10 @@ function eventDetailsListner(id) {
 }
 
 
+/**
+ * 
+ * @author Brendan Lin
+ */
 //this function checks if there are any events that the user is part of in the database
 function checkNumberOfEntries(entries) {
   if (entries == 0) {

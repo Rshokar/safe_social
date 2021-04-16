@@ -31,7 +31,7 @@ $(document).ready(function () {
     return container;
   }
 
-  //Sends user to the disover details page - Brendan
+  //Sends user to the disover details page
   function discoverDetailsListner(id) {
     console.log(document.getElementById(id));
     document.getElementById(id)
@@ -41,28 +41,28 @@ $(document).ready(function () {
       })
   }
 
-  //Creates the textboxes - Brendan
+  //Creates the textboxes
   function createBox(id) {
     let box = $("<div id='" + id + "'></div>");
     box.addClass("box");
     return box
   }
 
-  //Creates the title of event - Brendan
+  //Creates the title of event
   function createTitle(inName) {
     let title = $("<div>" + inName + "</div>");
     title.addClass("event_name");
     return title
   }
 
-  //Builds the addresses of locations - Brendan
+  //Builds the addresses of locations
   function createAddress(inAddress) {
     let address = $("<div>" + inAddress + "</div>");
     address.addClass("event_address");
     return address
   }
 
-  //Creates the rating - Brendan
+  //Creates the rating
   function createRating(inRating) {
     let positive = inRating
     let negative = 5 - inRating

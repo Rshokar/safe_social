@@ -72,6 +72,9 @@ function writeExposureHost() {
     })
 }
 
+/**
+ * @author Brendan Lin
+ */
 //function to read the exposure reports from database
 function writeExposureGuest() {
     //user variables
@@ -146,6 +149,9 @@ function writeExposureGuest() {
     })
 }
 
+/**
+ * @author Brendan Lin
+ */
 function setExposureConfirmation() {
     let urlBar = window.location;
     let url = new URL(urlBar);
