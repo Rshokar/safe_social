@@ -3,13 +3,20 @@
  * @author Ravinder Shokar
  * @version 1.0
  */
+
+///Get evnet ID from URL 
 var url_string = window.location;
 var url = new URL(url_string);
 var eventID = url.searchParams.get("id");
 
+/**
+ * This is run every time the page is loaded 
+ * @author Ravinder Shokar 
+ * @version 1.0
+ */
 $(document).ready(function () {
 
-  console.log(eventID);
+  //console.log(eventID);
 
   let eventQuery = db.collection('Event')
     .doc("" + eventID)
@@ -37,9 +44,7 @@ $(document).ready(function () {
     .orderBy('date')
     .onSnapshot((snap) => {
       snap.docChanges().forEach(function (change) {
-        console.log(change.doc.data());
         message = change.doc.data();
-        console.log()
         html = buildMessageHtml(
           message.UID,
           message.message,
@@ -53,7 +58,12 @@ $(document).ready(function () {
     });
 })
 
-/** Updates event title, host, date, time, and location. */
+/** 
+ * Updates event title, host, date, time, and location.
+ * @author Ravinder Shokar 
+ * @version 1.0 
+ * @param doc Event document returned by Firestore DB. 
+ */
 function updatePageDetails(doc) {
   $("#event_title").text(doc.data().event)
   $("#host").text("Host: " + doc.data().host.name)
@@ -67,6 +77,7 @@ function updatePageDetails(doc) {
 /**
  * Verify that current user is host of event.
  * @author Ravinder Shokar 
+ * @param hostID The event host user ID. 
  */
 function isHost(hostID) {
   if (hostID == auth.currentUser.uid) {
@@ -91,7 +102,6 @@ function renderGuest(isHost) {
     .orderBy('name')
     .onSnapshot((snap) => {
       snap.docChanges().forEach(function (change) {
-        console.log("change", change);
         if (change.type == "added") {
           console.log("You have added a guest.");
           guest = change.doc.data();
@@ -106,7 +116,11 @@ function renderGuest(isHost) {
 /**
  * Builds the guest list in the HTML document.
  * @author Ravinder Shokar
- * @param guests is a list of guest. 
+ * @version 1.0
+ * @param id Guest user ID. 
+ * @param name guest displayName
+ * @param isHost Boolean value indicating if current user logged in 
+ * is host of the event. 
  */
 function buildGuestHtml(id, name, ishost) {
   if (ishost) {
@@ -135,6 +149,7 @@ function buildGuestHtml(id, name, ishost) {
 /**
  * Builds the freinds list in #freinds_list.
  * @author Ravinder Shokar
+ * @version 1.0 
  * @param id is the id of the guest user.
  * @param name is the name of the guest user. 
  */
@@ -148,7 +163,6 @@ function buildFreindHtml(id, name) {
             </tr>
       `
   $('#freinds_list table').append(html);
-  console.log(name);
   inviteFreindListner(id, name);
 
 }
@@ -178,6 +192,7 @@ function uninviteFreindListner(id) {
  * Add an event listner to freinds list buttons. When clicked will remove from 
  * html, and then added to event guest list. 
  * @author Ravinder Shokar
+ * @version 1.0
  * @param id the id of the guest who has been invited removed.
  * @param name the name of the guest being invited 
  */
@@ -202,6 +217,7 @@ function inviteFreindListner(id, inName) {
 /**
  * This click function opens the add freind layover on event_details.html.
  * @author Ravinder Shokar
+ * @version 1.0
  */
 $("#invite_freinds").click(function () {
   console.log("Invite freinds has been clicked");
@@ -213,6 +229,7 @@ $("#invite_freinds").click(function () {
 /**
  * This click function closes the add freind layover on event_details.html.
  * @author Ravinder Shokar
+ * @version 1.0 
  */
 $("#back").click(function () {
   $("#freinds_list table").empty();
@@ -222,6 +239,7 @@ $("#back").click(function () {
 /**
  * Queries freinds from db and renders them in #freinds_list
  * @author Ravinder Shokar
+ * @version 1.0 
  */
 function renderFreinds() {
   db.collection("users")
@@ -242,6 +260,7 @@ function renderFreinds() {
 /** 
  * Slides group chat down into viewport.
  * @author Ravinder Shokar
+ * @version 1.0 
 */
 $("#show_chat").click(function () {
   $('#group_chat').slideDown(1000);
@@ -250,6 +269,7 @@ $("#show_chat").click(function () {
 /** 
  * Slides group chat up out of viewport
  * @author Ravinder Shokar
+ * @version 1.0 
  */
 $("#hide_chat").click(function () {
   $('#group_chat').slideUp(1000);
@@ -258,6 +278,7 @@ $("#hide_chat").click(function () {
 /** 
  * When clicked user submits a message to DB
  * @author Ravinder Shokar
+ * @version 1.0
  */
 $("#message_submit").click(function () {
   let date = new Date().toLocaleString();
@@ -270,6 +291,7 @@ $("#message_submit").click(function () {
 /** 
  * Builds message JSON objects.
  * @author Ravinder Shokar
+ * @version 1.0 
  */
 function buildMessageObj(message, now) {
   obj = {
@@ -285,6 +307,7 @@ function buildMessageObj(message, now) {
  * Builds message HTML elements. If inputed uID == current UID then 
  * class is set to current_user. Otherwise class is set to user. 
  * @author Ravinder Shokar
+ * @version 1.0
  */
 function buildMessageHtml(uID, message, name, date, status, messageID) {
 
@@ -311,6 +334,7 @@ function buildMessageHtml(uID, message, name, date, status, messageID) {
 /** 
  * Updates the chat collection.
  * @author Ravinder Shokar
+ * @version 1.0
  */
 function updateChatCollection(obj) {
   db.collection("Event")
@@ -318,7 +342,7 @@ function updateChatCollection(obj) {
     .collection('chat')
     .add(obj)
     .then((docRef) => {
-      console.log("Document written with ID: ", docRef.id)
+      //console.log("Document written with ID: ", docRef.id)
       $('#none').attr("id", docRef.id);
       $('#' + docRef.id + " " + '.status').html('Sent');
     })
