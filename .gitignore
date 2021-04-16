@@ -1,7 +1,8 @@
 # this is a file that mac computers produce, not needed for others on the team
 .DS_Store
-.firebasesrc
+.firebaserc
 .json
 .rules
 .firestore.rules
-.firestore.indexes.json
+.firestore.indexes
+.firebase
