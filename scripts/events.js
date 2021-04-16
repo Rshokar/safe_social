@@ -31,21 +31,6 @@ $(document).ready(function () {
             //console.log(createEvent(tableData));
             $("#host_events").append(createEvent(tableData));
             eventDetailsListner(doc.id);
-
-            /*tableData.push($(
-              `
-              <div id='${doc.id}' href='#' class='list-group-item list-group-item-action'>
-                <div class='d-flex w-100 justify-content-between'>
-                  <h5 class='mb-1'>${doc.data().event}</h5>
-                  <small class='text-muted'></small>
-                </div>
-                <small class='text-muted date'>${doc.data().date}</small></br>
-                <small class='text-muted location'>${doc.data().location}</small>
-              </div>"));
-              `))
-            //append tableData to html page
-            $("#host_events").append(tableData);
-            eventDetailsListner(doc.id); */
           }
         })
       });
