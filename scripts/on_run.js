@@ -1,5 +1,10 @@
 let restricted = ["account.html", "exposures.html", "bookingconfirm.html", "booking.html", "events.html", "event_history.html", "event_details.html"]
 
+/**
+ * Checks if current user is logged in. If not and user is on restricted URL then they are redirected to login page. 
+ * @author Ravinder Shokar 
+ * @version 1.0
+ */
 auth.onAuthStateChanged(function (user) {
     if (user) {
         console.log("user logged in")

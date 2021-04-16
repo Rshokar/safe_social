@@ -1,4 +1,9 @@
 
+/**
+ * This script builds our HTML blocks found on discover.html 
+ * @author Ravinder Shokar
+ * @version 1.0
+ */
 $(document).ready(function () {
 
   let eventLocation = [
@@ -21,6 +26,14 @@ $(document).ready(function () {
     discoverDetailsListner(eventLocation[i][4]);
   }
 
+
+  /**
+   * This function builds our HTML and return blocks found on discover.HTML 
+   * @author Ravinder Shokar
+   * @version 1.0
+   * @param inData A list containing event name, location, rating, Categories, ID, and image location 
+   * @returns HTML which will contain all inputed data. 
+   */
   function createDiscoverEvent(inData) {
     let container = createBox(inData[4])
     container.append(createImages(inData[5]))
@@ -31,7 +44,13 @@ $(document).ready(function () {
     return container;
   }
 
-  //Sends user to the disover details page - Brendan
+  /**
+   * Adds listner that reidrects user to discover_details.html after clicking on a 
+   * block. 
+   * @author Ravinder Shokar
+   * @version 1.0
+   * @param id Discover event location ID 
+   */
   function discoverDetailsListner(id) {
     console.log(document.getElementById(id));
     document.getElementById(id)
@@ -41,28 +60,53 @@ $(document).ready(function () {
       })
   }
 
-  //Creates the textboxes - Brendan
+  /**
+   * Creates the outer div in which rest of block will fit in. 
+   * @author Ravinder Shokar
+   * @version 1.0
+   * @param {*} id Discover event ID
+   * @returns div with id set to Event ID 
+   */
   function createBox(id) {
     let box = $("<div id='" + id + "'></div>");
     box.addClass("box");
     return box
   }
 
-  //Creates the title of event - Brendan
+  /**
+   * Creates div containing title if Event location.  
+   * @author Ravinder Shokar
+   * @version 1.0
+   * @param {*} inName Event name 
+   * @returns div containing event location name. 
+   */
   function createTitle(inName) {
     let title = $("<div>" + inName + "</div>");
     title.addClass("event_name");
     return title
   }
 
-  //Builds the addresses of locations - Brendan
+  /**
+    * Creates div containing address of Event location. 
+    * @author Ravinder Shokar
+    * @version 1.0
+    * @param {*} inName Event name 
+    * @returns div containing event location adress. 
+    */
   function createAddress(inAddress) {
     let address = $("<div>" + inAddress + "</div>");
     address.addClass("event_address");
     return address
   }
 
-  //Creates the rating - Brendan
+
+  /**
+    * Creates div containing rating of Event location. 
+    * @author Ravinder Shokar
+    * @version 1.0
+    * @param {*} inRating out of 5 rating of event location.
+    * @returns div containing event location rating. 
+    */
   function createRating(inRating) {
     let positive = inRating
     let negative = 5 - inRating
@@ -84,7 +128,11 @@ $(document).ready(function () {
     return ratingContainer
   }
 
-  //Creates rating stars
+  /**
+   * Creates and  returns stars found in rating. 
+   * @param {*} inColor color of the star
+   * @returns div shaped as a start. 
+   */
   function createStar(inColor) {
     let star = $("<div></div>");
     star.addClass("stars");
@@ -101,6 +149,11 @@ $(document).ready(function () {
     return star;
   }
 
+  /**
+   * Creates the HTML to store event location categories
+   * @param {*} inCategories A list of categories associated with event
+   * @returns span containing event location categories. 
+   */
   function createCategries(inCategories) {
     let categories = inCategories[0]
     for (w = 1; w < inCategories.length; w++) {
