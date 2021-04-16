@@ -8,6 +8,7 @@ var sendObj = JSON.parse(localStorage.getItem('formdata'));
 
 $(document).ready(function () {
   console.log(sendObj.address);
+  //Check if the Event and Location fields have data sent from discover
   if (sendObj.address != undefined) {
     document.getElementById("example-text-input").value = sendObj.event;
     document.getElementById("example-password-input").value = sendObj.address;
@@ -37,7 +38,7 @@ $("#submit").click(function () {
   window.location.replace(ROUTE + "bookingconfirm.html");
 })
 
-//This meathod gets event guest from guestObj and displays them to HTML
+//This method gets event guest from guestObj and displays them to HTML
 function renderGuest() {
   for (var guest in guestObj) {
     html = "<tr><td><span class='freind_name'>" + guestObj[guest].name

@@ -1,7 +1,7 @@
 /**
  * @author Brendan Lin
  */
-//function to write exposure report to database
+//function to write exposure report to database (users who are hosts only)
 function writeExposureHost() {
     //user variables
     var id;
@@ -26,7 +26,6 @@ function writeExposureHost() {
     if (mm < 10) {
         dateString = yyyy + "-" + "0" + mm + "-" + dd;
     }
-    //console.log(dateString);
 
     firebase.auth().onAuthStateChanged(function (user) {
 
@@ -75,7 +74,7 @@ function writeExposureHost() {
 /**
  * @author Brendan Lin
  */
-//function to read the exposure reports from database
+//function to read the exposure reports from database (users who are guests only)
 function writeExposureGuest() {
     //user variables
     var id;
@@ -152,6 +151,7 @@ function writeExposureGuest() {
 /**
  * @author Brendan Lin
  */
+//This function creates the confirmation message when a exposure form is submitted
 function setExposureConfirmation() {
     let urlBar = window.location;
     let url = new URL(urlBar);
