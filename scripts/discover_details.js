@@ -1,4 +1,9 @@
+/**
+ * @author Brendan Lin
+ */
+//This displays the details on the discover_details page
 $(document).ready(function () {
+    //variables
     var url_string = window.location;
     var url = new URL(url_string);
     var event;
@@ -6,12 +11,12 @@ $(document).ready(function () {
     var eventID = url.searchParams.get("id");
     console.log(eventID);
 
+    //query to db
     let query = db.collection('Location')
         .doc("" + eventID)
         .get()
         .then((doc) => {
             if (doc) {
-                //console.log(doc.data());
                 //Get event name and address and display them in their appropriate locations in html
                 event = doc.data().Event;
                 $("#event_title").text(doc.data().Event)
@@ -36,6 +41,7 @@ $(document).ready(function () {
             console.log("Error getting documents: " + error)
         })
 
+    //When user clicks on create event button, sends data to booking.html
     $("#eventButton").click(function () {
         var send = {
             "event": event,

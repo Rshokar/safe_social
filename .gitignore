@@ -3,3 +3,5 @@
 .firebasesrc
 .json
 .rules
+firestore.rules
+firestore.indexes.json

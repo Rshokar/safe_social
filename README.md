@@ -85,7 +85,6 @@ events.js
 booking.js
 create_event_blocks.js
 exposure.js
-main.css (some styles created)
 
 ## Trevor Hong
 events.html
