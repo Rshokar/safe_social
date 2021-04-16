@@ -53,6 +53,21 @@ Tips for file naming files and folders:
 exposures.html
 discover.html
 create_blocks.js
+account.html
+discover.html
+event_details.html
+event_history.html
+friends.js
+firebase-messaging-sw.js
+create-blocks.js
+on_run.js
+account.css
+booking.css
+discover.css
+event_details.css
+event_history.css
+main.css
+events.css
 
 ## Brendan Lin
 index.html
@@ -60,7 +75,21 @@ index.js
 main.css *(some styles created)
 stickyNav.css
 login.html
+exposure.js
+discover_details.js
+events.js
+booking.js
+events.html
+booking.html
+bookingConfirm.html
+discover_details.html
+create_event_blocks.js
+exposure.js
 
 ## Trevor Hong
 events.html
 booking.html
+notifications.js
+logout.js
+friends.js
+
