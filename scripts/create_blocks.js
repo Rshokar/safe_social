@@ -21,8 +21,6 @@ $(document).ready(function () {
     discoverDetailsListner(eventLocation[i][4]);
   }
 
-
-
   function createDiscoverEvent(inData) {
     let container = createBox(inData[4])
     container.append(createImages(inData[5]))
@@ -33,6 +31,7 @@ $(document).ready(function () {
     return container;
   }
 
+  //Sends user to the disover details page - Brendan
   function discoverDetailsListner(id) {
     console.log(document.getElementById(id));
     document.getElementById(id)
@@ -42,24 +41,28 @@ $(document).ready(function () {
       })
   }
 
+  //Creates the textboxes - Brendan
   function createBox(id) {
     let box = $("<div id='" + id + "'></div>");
     box.addClass("box");
     return box
   }
 
+  //Creates the title of event - Brendan
   function createTitle(inName) {
     let title = $("<div>" + inName + "</div>");
     title.addClass("event_name");
     return title
   }
 
+  //Builds the addresses of locations - Brendan
   function createAddress(inAddress) {
     let address = $("<div>" + inAddress + "</div>");
     address.addClass("event_address");
     return address
   }
 
+  //Creates the rating - Brendan
   function createRating(inRating) {
     let positive = inRating
     let negative = 5 - inRating
@@ -80,6 +83,8 @@ $(document).ready(function () {
 
     return ratingContainer
   }
+
+  //Creates rating stars
   function createStar(inColor) {
     let star = $("<div></div>");
     star.addClass("stars");

@@ -1,3 +1,6 @@
+/**
+ * @author Brendan Lin
+ */
 $(document).ready(function () {
     var url_string = window.location;
     var url = new URL(url_string);
@@ -11,7 +14,6 @@ $(document).ready(function () {
         .get()
         .then((doc) => {
             if (doc) {
-                //console.log(doc.data());
                 //Get event name and address and display them in their appropriate locations in html
                 event = doc.data().Event;
                 $("#event_title").text(doc.data().Event)

@@ -17,9 +17,6 @@ $(document).ready(function () {
         snap.forEach(function (doc) {
           console.log(doc.data());
 
-          //console.log(location);
-          //console.log(date);
-          //console.log(snap.size);
           //if a entry is found in database, increment counter and print data to page
           if (snap.size > 0) {
             entryCounter++;
@@ -27,25 +24,9 @@ $(document).ready(function () {
             //adds the html containing the event data to the tableData array
             var tableData = [];
             tableData.push(doc.data().event, doc.data().date, doc.data().location, doc.id);
-            //console.log(tableData);
-            //console.log(createEvent(tableData));
+
             $("#host_events").append(createEvent(tableData));
             eventDetailsListner(doc.id);
-
-            /*tableData.push($(
-              `
-              <div id='${doc.id}' href='#' class='list-group-item list-group-item-action'>
-                <div class='d-flex w-100 justify-content-between'>
-                  <h5 class='mb-1'>${doc.data().event}</h5>
-                  <small class='text-muted'></small>
-                </div>
-                <small class='text-muted date'>${doc.data().date}</small></br>
-                <small class='text-muted location'>${doc.data().location}</small>
-              </div>"));
-              `))
-            //append tableData to html page
-            $("#host_events").append(tableData);
-            eventDetailsListner(doc.id); */
           }
         })
       });
