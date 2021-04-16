@@ -1,0 +1,70 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "Event",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "guest.id.name",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Event",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "guest.upzOyQzYOASyCYB6OxIf95jrW4B3.name",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "Event",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "host.id",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "guest",
+      "fieldPath": "name",
+      "indexes": [
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION"
+        },
+        {
+          "order": "DESCENDING",
+          "queryScope": "COLLECTION"
+        },
+        {
+          "arrayConfig": "CONTAINS",
+          "queryScope": "COLLECTION"
+        },
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION_GROUP"
+        }
+      ]
+    }
+  ]
+}
