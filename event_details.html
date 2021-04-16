@@ -59,25 +59,8 @@
   <!-- Put Content Here -->
   <!-------------------------------------->
   <div id="contnet_section">
-    <div id="image_container">
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <p><img id="output" width="200" /></p>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
+    <img id="header_image" width="200" src="images/park1.png" />
+
     <h1 id="event_title"></h1>
 
     <div>
@@ -99,8 +82,8 @@
         </table>
       </div>
     </div>
-    <button type="button" id="show_chat">Chat</button>
-    <button type="button" id="invite_freinds" class="remove">Invite</button>
+    <button type="button" class="blue_button" id="show_chat">Chat</button>
+    <button type="button" id="invite_freinds" class="remove blue_button">Invite</button>
   </div>
 
   <!-- Guest list -->
@@ -122,7 +105,7 @@
       <div id="message_input">
         <input type="text" class="form-control" placeholder="message">
         <button type="button" id="message_submit">Send</button>
-        <button type="button" id="hide_chat">Hide</button>
+        <button class="blue_button" type="button" id="hide_chat">Hide</button>
       </div>
 
       <!-- This is where messages are rendereed -->
@@ -160,8 +143,6 @@
           </a>
         </div>
       </div>
-
-
       <div class="mobile-bottom-nav__item">
         <div class="mobile-bottom-nav__item-content">
           <a id="mobile_nav_links" href="booking.html">

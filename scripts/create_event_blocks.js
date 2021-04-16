@@ -47,7 +47,7 @@ function createSlider() {
 function createImages() {
   let image_container = $("<div><div>")
   image_container.addClass("image_container");
-  let image = $("<img src='images/account.png'>");
+  let image = $("<img src='images/park1.png'>");
 
   image_container.append(image)
   return image_container;
