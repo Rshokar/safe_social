@@ -81,3 +81,20 @@
     right: 0;
     display: none;
 }
+
+#header_image {
+    width: 100%;
+}
+
+
+
+.blue_button {
+    background-color: #58C1EE;
+    color: white;
+    border-radius: 10%;
+}
+
+.remove .blue_button {
+    background-color: white;
+    color: black;
+}

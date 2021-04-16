@@ -114,7 +114,8 @@ function buildGuestHtml(id, name, ishost) {
       `
             <tr>
                 <td><span class='guest_name'>${name}</span></td>
-                <td><button id=${id} class='remove'>Remove</button></td>
+                <td><button id=${id} class='remove blue_button' style="background-color: black;
+                color: white; border-radius: 10%;">Remove</button></td>
             </tr>
       `
   } else {

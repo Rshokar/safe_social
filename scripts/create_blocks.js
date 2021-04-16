@@ -2,18 +2,18 @@
 $(document).ready(function () {
 
   let eventLocation = [
-    ["Vancouver Creek Park", " 4600 Cambie St, Vancouver, BC V5Z 2Z1", 3, ["Hiking", "Tennis", "Out Door Gym"], "Xw4YyfzvrIkLFjE61G7m"
-  ],
-    ["Brandywine Falls Provincial Park", "Whistler, BC V0N 0A0", 2, ["Skating", "Fishing", "Snow Shoeing"], "ba4Rs6bIr8tDIfWDPfsV"
-  ],
-    ["Burnaby Mountain Conservation Area", "800 Burnaby Mountain Pkwy, Burnaby, BC V5A 1G9", 5, ["Hiking", "Bird Watching", "Running"], "7g9YEpk5SCUwqNdIbbzY"
-  ],
-    ["Ruth Johnson Park", "14600 North Bluff Rd, White Rock, BC V4B 2V1", 4, ["Swimming", "Dog Park"], "8cXzaOdTV7hWGdP5jm5o"],
-    ["Penzer Action Park", "4748 198c St, Langley City, BC V3A 8G2", 5, ["Cat Park", "Lots of Mice", "NO DOGS"], "mmslXIeU0Fh8fnEqlsgG"
-  ],
+    ["Vancouver Creek Park", " 4600 Cambie St, Vancouver, BC V5Z 2Z1", 3, ["Hiking", "Tennis", "Out Door Gym"], "Xw4YyfzvrIkLFjE61G7m", "park1.png"
+    ],
+    ["Brandywine Falls Provincial Park", "Whistler, BC V0N 0A0", 2, ["Skating", "Fishing", "Snow Shoeing"], "ba4Rs6bIr8tDIfWDPfsV", "park2.png"
+    ],
+    ["Burnaby Mountain Conservation Area", "800 Burnaby Mountain Pkwy, Burnaby, BC V5A 1G9", 5, ["Hiking", "Bird Watching", "Running"], "7g9YEpk5SCUwqNdIbbzY", "park3.png"
+    ],
+    ["Ruth Johnson Park", "14600 North Bluff Rd, White Rock, BC V4B 2V1", 4, ["Swimming", "Dog Park"], "8cXzaOdTV7hWGdP5jm5o", "park4.png"],
+    ["Penzer Action Park", "4748 198c St, Langley City, BC V3A 8G2", 5, ["Cat Park", "Lots of Mice", "NO DOGS"], "mmslXIeU0Fh8fnEqlsgG", "park5.jpg"
+    ],
   ]
 
-  
+
 
   for (i = 0; i < eventLocation.length; i++) {
     $("#content_section").append(createDiscoverEvent(eventLocation[i]));
@@ -21,11 +21,11 @@ $(document).ready(function () {
     discoverDetailsListner(eventLocation[i][4]);
   }
 
-  
-  
+
+
   function createDiscoverEvent(inData) {
     let container = createBox(inData[4])
-    container.append(createImages())
+    container.append(createImages(inData[5]))
     container.append(createTitle(inData[0]))
     container.append(createAddress(inData[1]))
     container.append(createRating(inData[2]))
@@ -36,14 +36,14 @@ $(document).ready(function () {
   function discoverDetailsListner(id) {
     console.log(document.getElementById(id));
     document.getElementById(id)
-        .addEventListener('click', function () {
-            myUrl = "http://127.0.0.1:5500/discover_details.html?id=" + id;
-            window.location.replace(myUrl);
-        })
-}
+      .addEventListener('click', function () {
+        myUrl = "http://127.0.0.1:5500/discover_details.html?id=" + id;
+        window.location.replace(myUrl);
+      })
+  }
 
   function createBox(id) {
-    let box = $("<div id='"+ id +"'></div>");
+    let box = $("<div id='" + id + "'></div>");
     box.addClass("box");
     return box
   }
@@ -91,7 +91,6 @@ $(document).ready(function () {
       "height": "20px",
       "max-width": "25px",
       "float": "left",
-      "margin-top": ".2em",
     })
 
     return star;
@@ -121,10 +120,10 @@ $(document).ready(function () {
     return slider
   }
 
-  function createImages() {
+  function createImages(inImage) {
     let image_container = $("<div><div>")
     image_container.addClass("image_container");
-    let image = $("<img src='images/account.png'>");
+    let image = $("<img class='event_image' src='images/" + inImage + "'>");
 
     image_container.append(image)
     return image_container;
