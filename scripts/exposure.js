@@ -64,7 +64,7 @@ function writeExposureHost() {
                             hostId: hostId,
                             reportedDate: reportedDate
                         });
-                    }    
+                    }
                 });
             }).then(function () {
                 writeExposureGuest();
@@ -137,7 +137,7 @@ function writeExposureGuest() {
                                 hostId: hostId,
                                 reportedDate: reportedDate
                             });
-                        }    
+                        }
                     }
                 });
             }).then(setTimeout(function () {
