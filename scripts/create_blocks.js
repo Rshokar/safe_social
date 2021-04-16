@@ -165,19 +165,11 @@ $(document).ready(function () {
 
   }
 
-  function createSlider() {
-    let slider = $("<div>=</div>");
-    slider.addClass("slider");
-    slider.css({
-      "height": "20px",
-      "width": "100%",
-      "color": "white",
-      "line-height": "15px"
-    })
-
-    return slider
-  }
-
+  /**
+   * Creates the HTML to display event location images
+   * @param {*} inImage Image associated with 
+   * @returns span containing event location categories. 
+   */
   function createImages(inImage) {
     let image_container = $("<div><div>")
     image_container.addClass("image_container");

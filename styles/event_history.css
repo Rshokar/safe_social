@@ -1,3 +1,9 @@
+/*
+Custome CSS for event_hisotry.html
+@author Ravinder Shokar 
+@version 1.0
+*/
+
 #tabs {
     display: grid;
     grid-template-columns: 50% 50%;

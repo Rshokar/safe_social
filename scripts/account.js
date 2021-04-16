@@ -1,9 +1,9 @@
-/*
-Author Ravinder Shokar
-version 1.0 
-
-JavaScript for account.html
-*/
+/**
+ * JavaScript for account.html
+ * @author Ravinder Shokar
+ * @version 1.0 
+ * 
+ */
 
 /**
  * This function updates the user name in the account page html.

@@ -2,209 +2,200 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>Safe Social</title>
-	<meta name="comp1800 boilerplate code" content="my bcit project">
-	<meta name="author" content="BCIT">
+  <meta charset="utf-8">
+  <title>Safe Social</title>
+  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <meta name="author" content="BCIT">
 
-	<!-- Bootstrap for Mobile-first, and JQuery -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap for Mobile-first, and JQuery -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-	<!-- Optional styles and scripts of your own -->
-	<link rel="stylesheet" href="styles/main.css" />
-	<link rel="stylesheet" href="styles/account.css" />
+  <!-- Optional styles and scripts of your own -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/account.css" />
 
 </head>
 
 <body>
-	<!-- Desktop and Tablet Navigation Bar -->
-	<nav id="desktop-nav-bar" class="navbar navbar-expand-lg navbar-light">
-		<div id="nav_container" class="container-fluid">
-			<a class="navbar-brand" href="index.html">Safe Social</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="events.html">Events</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="discover.html">Discover</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="account.html">Account</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="booking.html">New</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="login.html">Sign Up</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="login.html">Login</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!-- Content Section -->
-	<div id="content_section">
-		<header>
-			<div id="page_title">
-				<h1>Account</h1>
-			</div>
-			<img src="images/rav.jpg" alt="Avatar" class="avatar">
-			<span id="user_name"></span>
-			<div id="freinds_exposures_settings">
-				<span id="freinds_tab" class="tab">Friends</span>
-				<span id="exposures_tab" class="tab">Exposures</span>
-				<span id="account_tab" class="tab">My Info</span>
-			</div>
-		</header>
-		<div id="user_setting" class="page">
-			<div id="confirm">
-			</div>
-			<span>USER SETTINGS</span>
-			<div class=button id="my_account" onclick="expandAccount()"><i id="my_account_icon"></i>My Account</div>
-			<div id="my_account_form" style="display:none">
-				<form>
-					<div class="mb-3">
-						<label for="exampleInputEmail1" class="form-label">Email</label>
-						<input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
-					</div>
-					<div class="mb-3">
-						<label for="exampleInputEmail1" class="form-label">Name</label>
-						<input type="email" class="form-control" id="inputName" aria-describedby="emailHelp">
-					</div>
-					<a id="submit_edit_user" class="btn btn-primary">Submit</a>
-				</form>
-			</div>
-			<div class=button id="event_history"><i id="event_history_icon"></i>Event History</div>
-			<div class=button><i id="dark_mode_icon"></i>Dark Mode</div>
-			<div class=button><a id="logout">Log Out</a></div>
-		</div>
+  <!-- Desktop and Tablet Navigation Bar -->
+  <nav id="desktop-nav-bar" class="navbar navbar-expand-lg navbar-light">
+    <div id="nav_container" class="container-fluid">
+      <a class="navbar-brand" href="index.html">Safe Social</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="discover.html">Discover</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="account.html">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="booking.html">New</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="login.html">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Content Section -->
+  <div id="content_section">
+    <header>
+      <div id="page_title">
+        <h1>Account</h1>
+      </div>
+      <img src="images/rav.jpg" alt="Avatar" class="avatar">
+      <span id="user_name"></span>
+      <div id="freinds_exposures_settings">
+        <span id="freinds_tab" class="tab">Friends</span>
+        <span id="exposures_tab" class="tab">Exposures</span>
+        <span id="account_tab" class="tab">My Info</span>
+      </div>
+    </header>
+    <div id="user_setting" class="page">
+      <div id="confirm">
+      </div>
+      <span>USER SETTINGS</span>
+      <div class=button id="my_account" onclick="expandAccount()"><i id="my_account_icon"></i>My Account</div>
+      <div id="my_account_form" style="display:none">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input type="email" class="form-control" id="inputName" aria-describedby="emailHelp">
+          </div>
+          <a id="submit_edit_user" class="btn btn-primary">Submit</a>
+        </form>
+      </div>
+      <div class=button id="event_history"><i id="event_history_icon"></i>Event History</div>
+      <div class=button><i id="dark_mode_icon"></i>Dark Mode</div>
+      <div class=button><a id="logout">Log Out</a></div>
+    </div>
 
-		<div id="freinds" class="page">
-			<div class="form-outline" id='freinds_search'>
-				<input id='freinds_search_bar' type="text" id="form1" class="form-control" placeholder="Search"
-					aria-label="Search" />
-			</div>
-			<br>
+    <div id="freinds" class="page">
+      <div class="form-outline" id='freinds_search'>
+        <input id='freinds_search_bar' type="text" id="form1" class="form-control" placeholder="Search"
+          aria-label="Search" />
+      </div>
+      <br>
 
-			<!-- Table containing freinds. -->
-			<table id="freinds_list">
-			</table>
+      <!-- Table containing freinds. -->
+      <table id="freinds_list">
+      </table>
 
-			<!-- Table containing queried users. -->
-			<table id="user_list">
+      <!-- Table containing queried users. -->
+      <table id="user_list">
 
-			</table>
-		</div>
+      </table>
+    </div>
 
-		<!-- Exposure Tab -->
-		<div id="expsorues" class="page">
-			<span style="margin-top: 2em;"><b>EXPOSURES</b></span>
-			<!--<div class=button id="my_account" onclick="expandAccount()"><i id="my_account_icon"></i>My Account</div> -->
-			<div id="my_account_form">
-				<form>
-					<div class="mb-3">
-						<label for="exposureReport" class="form-label">Report an Exposure</label>
-						<input type="date" class="form-control" id="exposure">
-					</div>
-					<a id="submit_edit_user" class="btn btn-primary" onclick="writeExposureHost()">Submit</a>
-				</form>
-			</div>
-			<div id="exposedEvents">
-				<!--
-                
-                <div class="mb-3">
-                    <b>Reported Events</b>
-                </div>
-                <div class="mb-3" id="exposureContent">
-                </div>
-            </div> -->
-			</div>
-		</div>
+    <!-- Exposure Tab -->
+    <div id="expsorues" class="page">
+      <span style="margin-top: 2em;"><b>EXPOSURES</b></span>
+      <div id="my_account_form">
+        <form>
+          <div class="mb-3">
+            <label for="exposureReport" class="form-label">Report an Exposure</label>
+            <input type="date" class="form-control" id="exposure">
+          </div>
+          <a id="submit_edit_user" class="btn btn-primary" onclick="writeExposureHost()">Submit</a>
+        </form>
+      </div>
+      <div id="exposedEvents">
+      </div>
+    </div>
 
 
 
-		<!-- Mobile Navigation Bar -->
-		<footer id="mobile-nav-bar">
-			<nav class="mobile-bottom-nav">
-				<div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
-					<div class="mobile-bottom-nav__item-content">
-						<a id="mobile_nav_links" href="events.html">
-							<img src="images/events.png" class="mobile-nav-bar-icon">
-							<i class="material-icons">Events</i>
-						</a>
-					</div>
-				</div>
-				<div class="mobile-bottom-nav__item">
-					<div class="mobile-bottom-nav__item-content">
-						<a id="mobile_nav_links" href="discover.html">
-							<img src="images/discover.png" class="mobile-nav-bar-icon">
-							<i class="material-icons">Discover</i>
-						</a>
-					</div>
-				</div>
-				<div class="mobile-bottom-nav__item">
-					<div class="mobile-bottom-nav__item-content">
-						<a id="mobile_nav_links" href="account.html">
-							<img src="images/account.png" class="mobile-nav-bar-icon">
-							<i class="material-icons">Account</i>
-						</a>
-					</div>
-				</div>
+    <!-- Mobile Navigation Bar -->
+    <footer id="mobile-nav-bar">
+      <nav class="mobile-bottom-nav">
+        <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
+          <div class="mobile-bottom-nav__item-content">
+            <a id="mobile_nav_links" href="events.html">
+              <img src="images/events.png" class="mobile-nav-bar-icon">
+              <i class="material-icons">Events</i>
+            </a>
+          </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+          <div class="mobile-bottom-nav__item-content">
+            <a id="mobile_nav_links" href="discover.html">
+              <img src="images/discover.png" class="mobile-nav-bar-icon">
+              <i class="material-icons">Discover</i>
+            </a>
+          </div>
+        </div>
+        <div class="mobile-bottom-nav__item">
+          <div class="mobile-bottom-nav__item-content">
+            <a id="mobile_nav_links" href="account.html">
+              <img src="images/account.png" class="mobile-nav-bar-icon">
+              <i class="material-icons">Account</i>
+            </a>
+          </div>
+        </div>
 
-				<div class="mobile-bottom-nav__item">
-					<div class="mobile-bottom-nav__item-content">
-						<a id="mobile_nav_links" href="booking.html">
-							<img src="images/plus.png" class="mobile-nav-bar-icon">
-							<i class="material-icons">New</i>
-						</a>
-					</div>
-				</div>
-			</nav>
-		</footer>
-		<!----------------------------------------------->
-		<!-- JS: Boostrap, Firebase, API related    -->
-		<!----------------------------------------------->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-			</script>
+        <div class="mobile-bottom-nav__item">
+          <div class="mobile-bottom-nav__item-content">
+            <a id="mobile_nav_links" href="booking.html">
+              <img src="images/plus.png" class="mobile-nav-bar-icon">
+              <i class="material-icons">New</i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+      </script>
 
-		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-		<script src="scripts/firebase_api.js"></script>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="scripts/firebase_api.js"></script>
 
 
 
 
 
-		<!--------------------------------------------------------------------->
-		<!-- JS files: Your own JavaScript functions included here    -->
-		<!--------------------------------------------------------------------->
-		<script src="scripts/index.js"></script>
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+    <script src="scripts/index.js"></script>
 
-		<!-- Runs every time the file is opened -->
-		<script src="scripts/on_run.js"></script>
+    <!-- Runs every time the file is opened -->
+    <script src="scripts/on_run.js"></script>
 
-		<!-- Must be here to log a user out. -->
-		<script src="scripts/logout.js"></script>
+    <!-- Must be here to log a user out. -->
+    <script src="scripts/logout.js"></script>
 
-		<!-- Account page java script file -->
-		<script src="scripts/account.js"></script>
+    <!-- Account page java script file -->
+    <script src="scripts/account.js"></script>
 
-		<!-- exposure script file -->
-		<script src="scripts/exposure.js"></script>
+    <!-- exposure script file -->
+    <script src="scripts/exposure.js"></script>
 
 </body>
 

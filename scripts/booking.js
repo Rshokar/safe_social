@@ -8,6 +8,7 @@ var sendObj = JSON.parse(localStorage.getItem('formdata'));
 
 $(document).ready(function () {
   console.log(sendObj.address);
+  //Check if the Event and Location fields have data sent from discover
   if (sendObj.address != undefined) {
     document.getElementById("example-text-input").value = sendObj.event;
     document.getElementById("example-password-input").value = sendObj.address;
@@ -37,7 +38,11 @@ $("#submit").click(function () {
   window.location.replace(ROUTE + "bookingconfirm.html");
 })
 
-//This meathod gets event guest from guestObj and displays them to HTML
+/**
+ * This meathod gets user freinds from DB and displays them to HTML.
+ * @author Ravinder Shokar
+ * @version 1.0
+ */
 function renderGuest() {
   for (var guest in guestObj) {
     html = "<tr><td><span class='freind_name'>" + guestObj[guest].name
@@ -48,9 +53,10 @@ function renderGuest() {
 }
 
 /**
+ * This meathod gets user freinds from DB and displays them to HTML
  * @author Ravinder Shokar
+ * @version 1.0
  */
-//This meathod gets user freinds from DB and displays them to HTML
 function renderFreinds() {
   var freindsDoc = db.collection('users').doc(auth.currentUser.uid).collection('freinds');
   freindsDoc.get().then((querySnapshot) => {
@@ -70,9 +76,10 @@ function renderFreinds() {
 }
 
 /**
- * This function is targeted at back button on booking.html
+ * This function is targeted at back button on booking.html. 
  * It also empties the freinds list html and displays the guest html.  
- * 
+ * @author Ravinder Shokar
+ * @version 1.0 
  */
 $("#back").click(function () {
   renderGuest()
@@ -82,8 +89,12 @@ $("#back").click(function () {
   })
 })
 
-//This function is targeted at add freinds button on booking.html
-//It also empties the html guest list and displays freinds list. 
+/**
+ * This function is targeted at add freinds button on booking.html
+ * It also empties the html guest list and displays freinds list. 
+ * @author Ravinder Shokar 
+ * @version 1.0
+ */
 $("#add_freinds").click(function () {
   renderFreinds()
   $("#guest_list").empty()
@@ -92,7 +103,11 @@ $("#add_freinds").click(function () {
   })
 })
 
-//This event listner add the user to the guest list obj and html.
+/**
+ * This event listner adds user to the guest list obj and HTML.
+ * @param {*} id Guest ID 
+ * @param {*} name Guest Name
+ */
 function inviteFreindListner(id, name) {
   document.getElementById(id)
     .addEventListener('click', function () {
@@ -104,7 +119,11 @@ function inviteFreindListner(id, name) {
     })
 }
 
-//This event listner removes the user from the guest list obj and html.
+/**
+ * This event listner removes user to the guest list obj and HTML.
+ * @param {*} id Guest ID 
+ * @param {*} name Guest Name
+ */
 function uninviteFreindListner(id) {
   document.getElementById(id)
     .addEventListener('click', function () {
