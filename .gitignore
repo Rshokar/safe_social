@@ -3,6 +3,6 @@
 .firebaserc
 .json
 .rules
-.firestore.rules
-.firestore.indexes
-.firebase
+firestore.rules
+firestore.indexes
+firebase
