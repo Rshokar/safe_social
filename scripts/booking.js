@@ -62,8 +62,11 @@ function renderFreinds() {
   });
 }
 
-//This function is targeted at back button on booking.html
-//It also empties the freinds list html and displays the guest html.  
+/**
+ * This function is targeted at back button on booking.html
+ * It also empties the freinds list html and displays the guest html.  
+ * 
+ */
 $("#back").click(function () {
   renderGuest()
   $("#freinds_list table").empty()
